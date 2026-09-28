@@ -1,0 +1,3428 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background: #17090d;
+    color: #f8f3ec;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #17090d;
+}
+
+
+/* =====================================================
+   VÍDEO DE FUNDO
+===================================================== */
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 0;
+}
+
+
+/* =====================================================
+   CAMADA ESCURA SOBRE O VÍDEO
+===================================================== */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(18, 5, 9, 0.92) 0%,
+            rgba(38, 10, 17, 0.78) 30%,
+            rgba(45, 16, 24, 0.45) 55%,
+            rgba(20, 8, 12, 0.18) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   VINHETA
+===================================================== */
+
+.hero-vignette {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 35%,
+            rgba(15, 4, 8, 0.30) 75%,
+            rgba(10, 2, 5, 0.70) 100%
+        );
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   MOLDURA
+===================================================== */
+
+.hero-frame {
+    position: absolute;
+
+    top: 14px;
+    left: 37px;
+    right: 37px;
+    bottom: 14px;
+
+    border: 1px solid rgba(248, 243, 236, 0.38);
+
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.header-container {
+    width: calc(100% - 140px);
+    margin: 0 auto;
+
+    min-height: 125px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding-top: 18px;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    display: block;
+
+    width: 68px;
+
+    margin-left: 8px;
+    margin-top: 2px;
+
+    text-decoration: none;
+}
+
+.logo img {
+    display: block;
+
+    width: 68px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   NAVEGAÇÃO
+===================================================== */
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    gap: 34px;
+
+    padding-top: 7px;
+    padding-right: 8px;
+}
+
+.nav a {
+    position: relative;
+
+    color: #f8f3ec;
+
+    text-decoration: none;
+
+    font-family: "Lato", sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    transition: none;
+}
+
+
+/* NÃO muda de cor no hover */
+
+.nav a:hover {
+    color: #f8f3ec;
+}
+
+
+/* LINHA APARECE SOMENTE NO HOVER */
+
+.nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: #f8f3ec;
+
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   MENU MOBILE
+===================================================== */
+
+.menu-mobile {
+    display: none;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.menu-mobile span {
+    display: block;
+
+    width: 28px;
+    height: 2px;
+
+    margin: 6px 0;
+
+    background: #f8f3ec;
+}
+
+
+/* =====================================================
+   POSIÇÃO DO CONTEÚDO
+===================================================== */
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+
+    width: calc(100% - 200px);
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =====================================================
+   BLOCO DE TEXTO
+===================================================== */
+
+.hero-copy {
+    width: 58%;
+
+    padding-top: 90px;
+}
+
+
+/* =====================================================
+   TEXTO PEQUENO
+===================================================== */
+
+.hero-eyebrow {
+    display: block;
+
+    margin-bottom: 22px;
+
+    font-family: "Lato", sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    color: #f2e8df;
+}
+
+/* =====================================================
+   TÍTULO PRINCIPAL
+===================================================== */
+
+.hero-copy h1 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    /*
+       menor para manter a composição original
+       mesmo usando letras maiúsculas
+    */
+    font-size: clamp(48px, 4.25vw, 70px);
+
+    line-height: 0.94;
+
+    font-weight: 600;
+
+    letter-spacing: -1.5px;
+
+    color: #f8f3ec;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   DESTAQUE DO TÍTULO
+===================================================== */
+
+.hero-copy h1 span {
+    display: block;
+
+    color: #8F3948;
+
+    text-transform: uppercase;
+}
+
+
+
+/* =====================================================
+   DESCRIÇÃO
+===================================================== */
+
+.hero-description {
+    max-width: 650px;
+
+    margin-top: 30px;
+
+    font-family: "Lato", sans-serif;
+
+    font-size: 16px;
+    line-height: 1.65;
+
+    font-weight: 400;
+
+    color: rgba(248, 243, 236, 0.92);
+}
+
+
+/* =====================================================
+   AÇÕES
+===================================================== */
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+
+    margin-top: 38px;
+}
+
+
+/* =====================================================
+   BOTÃO PLAY
+===================================================== */
+
+.hero-play {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    background: transparent;
+
+    border: none;
+
+    color: #f8f3ec;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    font-family: "Lato", sans-serif;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.4px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   CÍRCULO DO PLAY
+===================================================== */
+
+.play-circle {
+    position: relative;
+
+    width: 66px;
+    height: 66px;
+
+    border: 1px solid rgba(248, 243, 236, 0.9);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.hero-play:hover .play-circle {
+    background: rgba(143, 36, 56, 0.65);
+
+    border-color: #e8b18d;
+
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   ÍCONE PLAY
+===================================================== */
+
+.play-icon {
+    width: 0;
+    height: 0;
+
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+
+    border-left: 10px solid #f8f3ec;
+
+    margin-left: 3px;
+}
+
+
+/* =====================================================
+   CTA PRINCIPAL
+===================================================== */
+
+.hero-cta {
+    position: relative;
+
+    width: 280px;
+    min-width: 280px;
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    padding: 0 25px;
+
+    background: #8F2438;
+
+    color: #FFF8F2;
+
+    border: 2px solid #E8B18D;
+    border-radius: 40px;
+
+    font-family: "Lato", sans-serif;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0;
+
+    text-align: center;
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 0 5px rgba(232, 177, 141, 0.95),
+        0 0 14px rgba(232, 177, 141, 0.75),
+        0 0 28px rgba(232, 120, 110, 0.45),
+        0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+
+/* BORDA INTERNA */
+
+.hero-cta::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 5px;
+
+    border: 1px solid rgba(248, 243, 236, 0.75);
+
+    border-radius: 34px;
+
+    pointer-events: none;
+}
+
+
+/* REMOVE SUBLINHADO */
+
+.hero-cta:hover,
+.hero-cta:focus,
+.hero-cta:active {
+    color: #FFF8F2;
+    text-decoration: none;
+    background: #7b1b2b;
+}
+
+
+/* =====================================================
+   MODAL DO VÍDEO
+===================================================== */
+
+.video-modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(8, 2, 5, 0.92);
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 100;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.video-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.video-modal-content {
+    position: relative;
+
+    width: min(900px, 90vw);
+
+    background: #12070a;
+
+    border: 1px solid rgba(232, 177, 141, 0.65);
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(232, 177, 141, 0.18);
+}
+
+
+.video-modal-content video {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* =====================================================
+   BOTÃO FECHAR
+===================================================== */
+
+.video-close {
+    position: absolute;
+
+    top: -45px;
+    right: 0;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid rgba(248, 243, 236, 0.7);
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #f8f3ec;
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.video-close:hover {
+    background: #8F2438;
+    color: #fff;
+}
+
+
+
+/* =========================================================
+   MÉTODO — DESKTOP
+========================================================= */
+
+.metodo-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    padding: clamp(34px, 4.5vh, 60px) 7% clamp(28px, 4vh, 50px);
+
+    background:
+        radial-gradient(
+            ellipse at 78% 25%,
+            rgba(190, 151, 119, 0.16) 0%,
+            rgba(190, 151, 119, 0.06) 25%,
+            transparent 48%
+        ),
+        #f8f3ec;
+
+    color: #5a1723;
+}
+
+/* CONTAINER */
+
+.metodo-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.metodo-intro {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: clamp(35px, 5vw, 70px);
+
+    margin-bottom: clamp(26px, 4vh, 38px);
+}
+
+/* TEXTO */
+
+.metodo-texto {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.metodo-label {
+    display: block;
+    margin-bottom: 16px;
+
+    font-family: "Lato", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #9a6a4f;
+}
+
+
+
+
+.metodo-texto h2 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(72px, 5.4vw, 88px);
+    font-weight: 600;
+    line-height: 0.88;
+    letter-spacing: -1.8px;
+    text-transform: uppercase;
+
+    background: linear-gradient(
+        90deg,
+        #ae6c70 0%,
+        #7a2635 30%,
+        #5a1723 57%,
+        #8b3546 82%,
+        #b47779 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.metodo-texto h2 span {
+    display: block;
+    font-family: "Cormorant Garamond", serif;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    letter-spacing: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #8e3949 0%,
+        #5a1723 32%,
+        #48111d 55%,
+        #762538 77%,
+        #ad6870 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+
+
+
+
+
+
+/* DESCRIÇÃO */
+
+.metodo-description {
+    max-width: 540px;
+    margin: 25px 0 0;
+
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.65;
+
+    color: #4d3b3d;
+}
+
+/* FRASE DESTACADA */
+
+.metodo-line {
+    width: 65px;
+    height: 1px;
+    margin: 23px 0 18px;
+
+    background: #9a6a4f;
+}
+
+.metodo-highlight {
+    max-width: 470px;
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 23px;
+    font-style: italic;
+    line-height: 1.25;
+
+    color: #7a2635;
+}
+
+.metodo-highlight strong {
+    font-weight: 600;
+}
+
+
+/* IMAGEM — ENQUADRAMENTO DA REFERÊNCIA */
+
+.metodo-intro {
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+
+.metodo-image { 
+    position: relative; 
+    align-self: start; 
+ 
+    width: calc(100% + 7vw); 
+    height: clamp(430px, 52vh, 490px); 
+ 
+    margin-right: -7vw; 
+    margin-top: -45px;
+    top: -30px;
+ 
+    overflow: hidden; 
+    isolation: isolate; 
+    background: #e9dfd3; 
+}
+
+.metodo-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f8f3ec 0%,
+            rgba(248, 243, 236, 0.8) 9%,
+            rgba(248, 243, 236, 0.4) 23%,
+            rgba(248, 243, 236, 0.1) 36%,
+            transparent 50%
+        ),
+        linear-gradient(
+            0deg,
+            #f8f3ec 0%,
+            rgba(248, 243, 236, 0.18) 9%,
+            transparent 25%
+        );
+}
+
+.metodo-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 55%;
+    filter: saturate(0.88) brightness(0.94);
+}
+
+/* =========================================================
+   PILARES DO MÉTODO
+========================================================= */
+
+.metodo-pilares {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0;
+
+    border-top: 1px solid rgba(90, 23, 35, 0.15);
+}
+
+/* CADA PILAR */
+
+.metodo-pilar {
+    position: relative;
+    min-width: 0;
+    padding: 0 14px 0;
+
+    text-align: center;
+    border-right: none;
+}
+
+/* NÚMEROS CIRCULARES */
+
+
+.pilar-number {
+    width: 55px;
+    height: 55px;
+    margin: -22px auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #b47a66;
+    border-radius: 50%;
+    background: #f8f3ec;
+
+    font-family:  "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 550;
+    color: #7a2635;
+}
+
+/* TÍTULOS */
+
+.metodo-pilar h3 {
+    margin: 0 0 9px;
+
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+
+    color: #5a1723;
+}
+
+/* DESCRIÇÕES */
+
+.metodo-pilar p {
+    max-width: 175px;
+    margin: 0 auto;
+
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.45;
+
+    color: #6b595b;
+}
+
+/* =========================================================
+   BOTÃO
+========================================================= */
+
+.metodo-cta-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 27px;
+}
+
+.metodo-cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 245px;
+    height: 48px;
+    padding: 0 35px;
+    box-sizing: border-box;
+
+    border: 1px solid #b63d50;
+    border-radius: 40px;
+
+    background: #7a2635;
+    color: #f8f3ec;
+
+    font-family: "Lato", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    box-shadow:
+        0 0 0 3px #f8f3ec,
+        0 0 0 5px rgba(182, 61, 80, 0.8),
+        0 5px 16px rgba(90, 23, 35, 0.13);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.metodo-cta:hover {
+    transform: translateY(-2px);
+
+    background: #651d2b;
+
+    box-shadow:
+        0 0 0 3px #f8f3ec,
+        0 0 0 5px #b63d50,
+        0 8px 22px rgba(90, 23, 35, 0.2);
+}
+
+
+
+/* =====================================================
+   O QUE VOCÊ RECEBE
+===================================================== */
+
+.recebe-section {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    padding: 42px 7%;
+
+    background: linear-gradient(
+        110deg,
+        #4b0e1c 0%,
+        #5a1723 48%,
+        #4a0d1b 100%
+    );
+
+    color: #f8f3ec;
+}
+
+/* CONTAINER */
+
+.recebe-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.9fr 1.6fr;
+    align-items: center;
+    gap: 45px;
+
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* =====================================================
+   INTRODUÇÃO
+===================================================== */
+
+.recebe-intro {
+    position: relative;
+    z-index: 2;
+    max-width: 390px;
+}
+
+.recebe-label {
+    display: block;
+    margin-bottom: 10px;
+
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #d5b8a7;
+}
+
+/* TÍTULO */
+
+.recebe-intro h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(32px, 3vw, 43px);
+    font-weight: 600;
+    line-height: 0.96;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+
+    color: #f8f3ec;
+}
+
+.recebe-intro h2 span {
+    display: block;
+    color: #e5c9bb;
+}
+
+/* DESCRIÇÃO */
+
+.recebe-description {
+    max-width: 370px;
+    margin: 12px 0 16px;
+
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.55;
+
+    color: rgba(248, 243, 236, 0.85);
+}
+
+/* =====================================================
+   BOTÃO
+===================================================== */
+
+.recebe-cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 185px;
+    min-height: 34px;
+    padding: 0 22px;
+    box-sizing: border-box;
+
+    border: 1px solid #c77a80;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        100deg,
+        #8f263b,
+        #b33d50,
+        #8f263b
+    );
+
+    color: #fff9f3;
+
+    font-family: "Lato", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    box-shadow:
+        0 0 0 2px rgba(248, 243, 236, 0.12),
+        0 4px 12px rgba(0, 0, 0, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.recebe-cta:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(
+        100deg,
+        #a63148,
+        #c64e60,
+        #a63148
+    );
+
+    box-shadow:
+        0 0 12px rgba(218, 143, 148, 0.3),
+        0 6px 18px rgba(0, 0, 0, 0.22);
+}
+
+/* =====================================================
+   GRID DE BENEFÍCIOS
+===================================================== */
+
+.recebe-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 9px;
+
+    width: 100%;
+}
+
+/* CARDS */
+
+.recebe-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 91px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+
+    border: 1px solid rgba(226, 199, 182, 0.14);
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.015);
+
+    text-align: center;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.recebe-card:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(226, 199, 182, 0.42);
+    background: rgba(255, 255, 255, 0.045);
+
+    box-shadow: 0 8px 20px rgba(20, 0, 6, 0.15);
+}
+
+/* ÍCONES */
+
+.recebe-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 23px;
+    height: 23px;
+    margin-bottom: 6px;
+
+    color: #d7b6a3;
+}
+
+.recebe-icon svg {
+    display: block;
+    width: 19px;
+    height: 19px;
+}
+
+/* TÍTULOS DOS CARDS */
+
+.recebe-card h3 {
+    margin: 0 0 4px;
+
+    font-family: "Lato", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+
+    color: #f8f3ec;
+}
+
+/* TEXTOS DOS CARDS */
+
+.recebe-card p {
+    max-width: 155px;
+    margin: 0;
+
+    font-family: "Lato", sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 1.4;
+
+    color: rgba(248, 243, 236, 0.72);
+}
+
+/* =====================================================
+   DECORAÇÃO BOTÂNICA
+===================================================== */
+
+.recebe-decor {
+    position: absolute;
+    z-index: 1;
+
+    top: -45px;
+    right: -7vw;
+
+    width: 125px;
+    height: auto;
+
+    color: #b87a81;
+    opacity: 0.27;
+
+    pointer-events: none;
+}
+
+
+
+/* =====================================================
+   BÔNUS ESPECIAIS
+===================================================== */
+
+.bonus-section {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    padding: 35px 7%;
+
+    background: linear-gradient(
+        110deg,
+        #390817 0%,
+        #4a0b1b 50%,
+        #350613 100%
+    );
+
+    color: #f8f3ec;
+}
+
+/* CONTAINER */
+
+.bonus-container {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 0.95fr 1.55fr;
+    align-items: center;
+    gap: 40px;
+
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* =====================================================
+   INTRODUÇÃO
+===================================================== */
+
+.bonus-intro {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+}
+
+.bonus-label {
+    display: block;
+    margin-bottom: 8px;
+
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #d8b9a7;
+}
+
+/* TÍTULO */
+
+.bonus-intro h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(34px, 3vw, 44px);
+    font-weight: 600;
+    line-height: 0.98;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+
+    color: #f8f3ec;
+}
+
+.bonus-intro h2 span {
+    display: block;
+
+    font-size: 0.95em;
+    font-style: italic;
+    font-weight: 500;
+    text-transform: none;
+
+    color: #d5a5a6;
+}
+
+/* DESCRIÇÃO */
+
+.bonus-description {
+    max-width: 350px;
+    margin: 12px 0 16px;
+
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.55;
+
+    color: rgba(248, 243, 236, 0.82);
+}
+
+/* =====================================================
+   BOTÃO
+===================================================== */
+
+.bonus-cta {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 185px;
+    min-height: 34px;
+    padding: 0 22px;
+    box-sizing: border-box;
+
+    border: 1px solid #d17a89;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        100deg,
+        #8e263b,
+        #b43d53,
+        #8e263b
+    );
+
+    color: #fff9f3;
+
+    font-family: "Lato", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    box-shadow:
+        0 0 0 2px rgba(248, 243, 236, 0.1),
+        0 4px 12px rgba(0, 0, 0, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.bonus-cta:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(
+        100deg,
+        #a53149,
+        #c34d61,
+        #a53149
+    );
+
+    box-shadow:
+        0 0 14px rgba(219, 133, 150, 0.3),
+        0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* =====================================================
+   GRID DE BÔNUS
+===================================================== */
+
+.bonus-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+
+    width: 100%;
+}
+
+/* CARDS */
+
+.bonus-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 125px;
+    padding: 16px 12px;
+    box-sizing: border-box;
+
+    border: 1px solid rgba(226, 199, 182, 0.15);
+    border-radius: 3px;
+
+    background: rgba(255, 255, 255, 0.015);
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.bonus-card:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(221, 175, 163, 0.5);
+    background: rgba(255, 255, 255, 0.045);
+
+    box-shadow: 0 8px 22px rgba(15, 0, 5, 0.2);
+}
+
+/* ÍCONES */
+
+.bonus-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    margin-bottom: 8px;
+
+    color: #d6b5a4;
+}
+
+.bonus-icon svg {
+    display: block;
+    width: 23px;
+    height: 23px;
+}
+
+/* TÍTULOS DOS CARDS */
+
+.bonus-card h3 {
+    margin: 0 0 6px;
+
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    color: #f8f3ec;
+}
+
+/* DESCRIÇÕES */
+
+.bonus-card p {
+    max-width: 175px;
+    margin: 0;
+
+    font-family: "Lato", sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 1.45;
+
+    color: rgba(248, 243, 236, 0.7);
+}
+
+/* =====================================================
+   ELEMENTO BOTÂNICO
+===================================================== */
+
+.bonus-decor {
+    position: absolute;
+    z-index: 1;
+
+    top: -60px;
+    right: -7vw;
+
+    width: 140px;
+    height: auto;
+
+    color: #b77a83;
+    opacity: 0.2;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   DEPOIMENTOS
+===================================================== */
+
+.depoimentos-section {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    padding: 35px 7%;
+
+    background: #f8f3ec;
+    color: #5a1723;
+}
+
+/* CONTAINER */
+
+.depoimentos-container {
+    display: grid;
+    grid-template-columns: 0.85fr 1.7fr;
+    align-items: center;
+    gap: 40px;
+
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* =====================================================
+   INTRODUÇÃO
+===================================================== */
+
+.depoimentos-intro {
+    position: relative;
+    z-index: 1;
+    max-width: 390px;
+}
+
+.depoimentos-label {
+    display: block;
+    margin-bottom: 8px;
+
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #9a6a4f;
+}
+
+/* TÍTULO */
+
+.depoimentos-intro h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(34px, 3vw, 46px);
+    font-weight: 600;
+    line-height: 0.98;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+
+    color: #5a1723;
+}
+
+.depoimentos-intro h2 span {
+    display: block;
+    color: #7a2635;
+}
+
+/* DESCRIÇÃO */
+
+.depoimentos-description {
+    max-width: 350px;
+    margin: 12px 0 15px;
+
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.6;
+
+    color: #6b595b;
+}
+
+/* =====================================================
+   BOTÃO
+===================================================== */
+
+.depoimentos-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 32px;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    border: 1px solid #9a6a4f;
+    border-radius: 30px;
+
+    background: transparent;
+    color: #7a2635;
+
+    font-family: "Lato", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.depoimentos-cta:hover {
+    background: #7a2635;
+    border-color: #7a2635;
+    color: #f8f3ec;
+}
+
+.depoimentos-cta:focus-visible,
+.depoimentos-arrow:focus-visible {
+    outline: 2px solid #b47a66;
+    outline-offset: 4px;
+}
+
+/* =====================================================
+   CARROSSEL
+===================================================== */
+
+.depoimentos-carousel {
+    display: grid;
+    grid-template-columns: 22px minmax(0, 1fr) 22px;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    min-width: 0;
+}
+
+/* ÁREA DE VISUALIZAÇÃO */
+
+.depoimentos-viewport {
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.depoimentos-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+/* TRILHO */
+
+.depoimentos-track {
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+
+    width: 100%;
+}
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.depoimento-card {
+    display: flex;
+    flex: 0 0 calc((100% - 24px) / 3);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    min-width: 0;
+    min-height: 150px;
+    padding: 15px 10px 12px;
+    box-sizing: border-box;
+
+    border: 1px solid rgba(90, 23, 35, 0.13);
+    border-radius: 3px;
+
+    background: rgba(255, 255, 255, 0.48);
+
+    text-align: center;
+    scroll-snap-align: start;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.depoimento-card:hover {
+    border-color: rgba(122, 38, 53, 0.35);
+    background: #fffdfa;
+    box-shadow: 0 5px 18px rgba(90, 23, 35, 0.06);
+}
+
+/* FOTO / AVATAR */
+
+.depoimento-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+    margin-bottom: 7px;
+    flex-shrink: 0;
+
+    overflow: hidden;
+    border: 1px solid rgba(154, 106, 79, 0.35);
+    border-radius: 50%;
+
+    background: #eadbd2;
+    color: #9a6a4f;
+}
+
+.depoimento-avatar svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ESTRELAS */
+
+.depoimento-stars {
+    margin-bottom: 7px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+
+    color: #b77b39;
+}
+
+/* TEXTO */
+
+.depoimento-text {
+    max-width: 190px;
+    margin: 0 auto 9px;
+
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    color: #6b595b;
+}
+
+/* NOME */
+
+.depoimento-name {
+    display: block;
+    margin-top: auto;
+
+    font-family: "Lato", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+
+    color: #7a2635;
+}
+
+/* =====================================================
+   SETAS
+===================================================== */
+
+.depoimentos-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 32px;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #7a2635;
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.depoimentos-arrow svg {
+    width: 20px;
+    height: 20px;
+}
+
+.depoimentos-prev:hover {
+    transform: translateX(-2px);
+    color: #b47a66;
+}
+
+.depoimentos-next:hover {
+    transform: translateX(2px);
+    color: #b47a66;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+    .depoimentos-container {
+        grid-template-columns: 0.8fr 1.5fr;
+        gap: 25px;
+    }
+
+    .depoimento-card {
+        flex-basis: calc((100% - 12px) / 2);
+    }
+
+    .depoimentos-intro h2 {
+        font-size: clamp(32px, 3.8vw, 40px);
+    }
+}
+
+/* =====================================================
+   TABLET MENOR
+===================================================== */
+
+@media (max-width: 850px) {
+    .depoimentos-section {
+        padding: 65px 6%;
+    }
+
+    .depoimentos-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .depoimentos-intro {
+        max-width: 600px;
+    }
+
+    .depoimentos-intro h2 {
+        font-size: clamp(38px, 6vw, 48px);
+    }
+
+    .depoimentos-description {
+        max-width: 480px;
+    }
+
+    .depoimentos-carousel {
+        max-width: 100%;
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+    .depoimentos-section {
+        padding: 55px 7%;
+    }
+
+    .depoimentos-container {
+        gap: 25px;
+    }
+
+    .depoimentos-label {
+        font-size: 9px;
+    }
+
+    .depoimentos-intro h2 {
+        font-size: 37px;
+    }
+
+    .depoimentos-description {
+        font-size: 12px;
+    }
+
+    .depoimentos-carousel {
+        grid-template-columns: 20px minmax(0, 1fr) 20px;
+        gap: 6px;
+    }
+
+    .depoimento-card {
+        flex-basis: 100%;
+        min-height: 165px;
+        padding: 18px 15px;
+    }
+
+    .depoimento-avatar {
+        width: 42px;
+        height: 42px;
+    }
+
+    .depoimento-avatar svg {
+        width: 23px;
+        height: 23px;
+    }
+
+    .depoimento-text {
+        max-width: 260px;
+        font-size: 12px;
+    }
+
+    .depoimento-name {
+        font-size: 10px;
+    }
+}
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+    .depoimentos-viewport {
+        scroll-behavior: auto;
+    }
+
+    .depoimento-card,
+    .depoimentos-arrow,
+    .depoimentos-cta {
+        transition: none;
+    }
+}
+
+
+
+/* =====================================================
+   INVESTIMENTO
+===================================================== */
+
+.investimento-section {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 34px 7%;
+    background: linear-gradient(
+        110deg,
+        #390817 0%,
+        #4a0b1b 50%,
+        #350613 100%
+    );
+    color: #f8f3ec;
+}
+
+.investimento-container {
+    display: grid;
+    grid-template-columns: 1.05fr 1.05fr 0.85fr;
+    align-items: center;
+    gap: 22px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* INTRO */
+
+.investimento-intro {
+    max-width: 350px;
+}
+
+.investimento-label,
+.garantia-label,
+.vagas-label {
+    display: block;
+    margin-bottom: 7px;
+    font-family: "Lato", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #d8b9a7;
+}
+
+.investimento-intro h2 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(30px, 2.7vw, 40px);
+    font-weight: 600;
+    line-height: 0.96;
+    text-transform: uppercase;
+    color: #f8f3ec;
+}
+
+.investimento-intro h2 span {
+    display: block;
+    color: #d5a5a6;
+    font-style: italic;
+}
+
+.investimento-intro > p {
+    max-width: 330px;
+    margin: 10px 0 13px;
+    font-family: "Lato", sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: rgba(248, 243, 236, 0.82);
+}
+
+/* CTA */
+
+.investimento-cta,
+.investimento-card-cta,
+.vagas-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 33px;
+    padding: 0 22px;
+    border: 1px solid #d17a89;
+    border-radius: 30px;
+    background: linear-gradient(100deg, #8e263b, #b43d53);
+    color: #fff9f3;
+    font-family: "Lato", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.investimento-cta:hover,
+.investimento-card-cta:hover,
+.vagas-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+}
+
+/* BENEFÍCIOS */
+
+.investimento-beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.investimento-beneficio {
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    column-gap: 9px;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(248,243,236,0.09);
+}
+
+.investimento-beneficio:last-child {
+    border-bottom: none;
+}
+
+.investimento-beneficio-icon {
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    color: #d6b5a4;
+}
+
+.investimento-beneficio-icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+.investimento-beneficio h3 {
+    margin: 0 0 2px;
+    font-family: "Lato", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: #f8f3ec;
+}
+
+.investimento-beneficio p {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 9px;
+    line-height: 1.35;
+    color: rgba(248,243,236,0.7);
+}
+
+/* CARD DO PREÇO */
+
+.investimento-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 17px 12px;
+    border: 1px solid rgba(225,170,177,0.65);
+    border-radius: 4px;
+    background: linear-gradient(
+        145deg,
+        #762139,
+        #571226
+    );
+    box-shadow: 0 5px 20px rgba(0,0,0,0.18);
+    text-align: center;
+}
+
+.investimento-card-label {
+    margin-bottom: 5px;
+    font-family: "Lato", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #e9c3bd;
+}
+
+.investimento-card-subtitle {
+    font-family: "Lato", sans-serif;
+    font-size: 9px;
+    color: rgba(248,243,236,0.82);
+}
+
+.investimento-preco {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 3px 0 0;
+    color: #fff9f3;
+}
+
+.investimento-moeda {
+    margin: 11px 3px 0 0;
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+}
+
+.investimento-preco strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 43px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.investimento-parcelas {
+    margin-top: 2px;
+    font-family: "Lato", sans-serif;
+    font-size: 9px;
+    color: rgba(248,243,236,0.85);
+}
+
+.investimento-card-divider {
+    width: 80%;
+    height: 1px;
+    margin: 10px 0;
+    background: rgba(248,243,236,0.2);
+}
+
+.investimento-card-cta {
+    width: 100%;
+    min-height: 30px;
+    padding: 0 8px;
+    font-size: 8px;
+}
+
+.investimento-card-note {
+    margin-top: 7px;
+    font-family: "Lato", sans-serif;
+    font-size: 7px;
+    line-height: 1.4;
+    color: rgba(248,243,236,0.65);
+    text-align: center;
+}
+
+/* =====================================================
+   GARANTIA E FAQ
+===================================================== */
+
+.garantia-section {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 34px 7%;
+    overflow: hidden;
+    background: #f8f3ec;
+    color: #5a1723;
+}
+
+.garantia-container {
+    display: grid;
+    grid-template-columns: 0.95fr 1.3fr;
+    align-items: center;
+    gap: 65px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* GARANTIA INTRO */
+
+.garantia-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 62px;
+    align-items: center;
+    column-gap: 12px;
+    max-width: 490px;
+}
+
+.garantia-label {
+    grid-column: 1 / -1;
+    margin-bottom: 5px;
+    color: #9a6a4f;
+}
+
+.garantia-intro h2 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(28px, 2.6vw, 38px);
+    font-weight: 600;
+    line-height: 0.96;
+    text-transform: uppercase;
+    color: #5a1723;
+}
+
+.garantia-intro h2 span {
+    display: block;
+    color: #7a2635;
+}
+
+.garantia-description {
+    grid-column: 1;
+    max-width: 330px;
+    margin: 9px 0 0;
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    line-height: 1.5;
+    color: #6b595b;
+}
+
+/* SELO 7 DIAS */
+
+.garantia-selo {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #7a2635;
+    box-shadow: 0 0 0 3px #f8f3ec, 0 0 0 4px #a86a73;
+    color: #fff9f3;
+    text-align: center;
+}
+
+.garantia-selo-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 51px;
+    height: 51px;
+    border: 1px solid rgba(248,243,236,0.65);
+    border-radius: 50%;
+}
+
+.garantia-selo-numero {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 0.85;
+}
+
+.garantia-selo-dias {
+    margin-top: 3px;
+    font-family: "Lato", sans-serif;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.garantia-texto-final {
+    grid-column: 1 / -1;
+    max-width: 350px;
+    margin: 10px 0 0;
+    font-family: "Lato", sans-serif;
+    font-size: 9px;
+    line-height: 1.5;
+    color: #6b595b;
+}
+
+/* FAQ */
+
+.faq-container {
+    width: 100%;
+    min-width: 0;
+}
+
+.faq-label {
+    display: block;
+    margin-bottom: 4px;
+    font-family: "Lato", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #9a6a4f;
+}
+
+.faq-title {
+    margin: 0 0 10px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(25px, 2.4vw, 34px);
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #5a1723;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.faq-item {
+    border: 1px solid rgba(90,23,35,0.14);
+    border-radius: 3px;
+    background: rgba(255,255,255,0.35);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    min-height: 30px;
+    padding: 6px 10px;
+    border: none;
+    background: transparent;
+    color: #5a1723;
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-icon {
+    flex-shrink: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #9a6a4f;
+    transition: transform 0.25s ease;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    margin: 0;
+    padding: 0 10px 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    line-height: 1.5;
+    color: #6b595b;
+}
+
+/* =====================================================
+   VAGAS LIMITADAS
+===================================================== */
+
+.vagas-section {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 22px 7%;
+    background: linear-gradient(
+        110deg,
+        #390817,
+        #4a0b1b 50%,
+        #350613
+    );
+    color: #f8f3ec;
+    text-align: center;
+}
+
+.vagas-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.vagas-label {
+    margin-bottom: 3px;
+    font-size: 8px;
+    color: #d5aaa0;
+}
+
+.vagas-container h2 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(29px, 3vw, 38px);
+    font-weight: 600;
+    line-height: 0.98;
+    text-transform: uppercase;
+    color: #f8f3ec;
+}
+
+.vagas-container h2 span {
+    color: #e1b8b3;
+}
+
+.vagas-container p {
+    margin: 5px 0 9px;
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+    color: rgba(248,243,236,0.8);
+}
+
+.vagas-cta {
+    min-height: 31px;
+    min-width: 160px;
+    font-size: 8px;
+}
+
+/* =====================================================
+   RODAPÉ
+===================================================== */
+
+.footer-section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 7% 0;
+    background: #21040c;
+    color: #f8f3ec;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 60px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    max-width: 1400px;
+    min-height: 36px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-logo img {
+    display: block;
+    width: 34px;
+    max-height: 30px;
+    object-fit: contain;
+}
+
+.footer-copy {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 8px;
+    line-height: 1.4;
+    text-align: center;
+    color: rgba(248,243,236,0.7);
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.footer-links a {
+    font-family: "Lato", sans-serif;
+    font-size: 8px;
+    color: rgba(248,243,236,0.75);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #e1b8b3;
+}
+
+.footer-separator {
+    font-size: 8px;
+    color: rgba(248,243,236,0.3);
+}
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: 8px auto 0;
+    padding: 7px 0;
+    border-top: 1px solid rgba(248,243,236,0.08);
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 7px;
+    color: rgba(248,243,236,0.45);
+}
+
+/* =====================================================
+   AJUSTES DE LARGURA
+===================================================== */
+
+@media (max-width: 1100px) {
+    .investimento-container {
+        grid-template-columns: 1fr 1fr 0.85fr;
+        gap: 14px;
+    }
+
+    .garantia-container {
+        gap: 35px;
+    }
+
+    .investimento-intro h2 {
+        font-size: 32px;
+    }
+
+    .garantia-intro h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 850px) {
+    .investimento-section,
+    .garantia-section {
+        padding: 55px 6%;
+    }
+
+    .investimento-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .investimento-intro {
+        max-width: 100%;
+    }
+
+    .investimento-card {
+        grid-column: 1 / -1;
+        width: min(100%, 320px);
+        justify-self: center;
+    }
+
+    .garantia-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .garantia-intro {
+        max-width: 600px;
+    }
+
+    .vagas-section {
+        padding: 28px 6%;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .investimento-section,
+    .garantia-section {
+        padding: 45px 7%;
+    }
+
+    .investimento-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .investimento-intro h2 {
+        font-size: 34px;
+    }
+
+    .investimento-beneficios {
+        gap: 12px;
+    }
+
+    .investimento-card {
+        grid-column: auto;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .garantia-intro {
+        grid-template-columns: minmax(0, 1fr) 60px;
+    }
+
+    .garantia-intro h2 {
+        font-size: 32px;
+    }
+
+    .faq-title {
+        font-size: 30px;
+    }
+
+    .faq-question {
+        font-size: 11px;
+        min-height: 38px;
+    }
+
+    .faq-answer p {
+        font-size: 11px;
+    }
+
+    .vagas-section {
+        padding: 30px 7%;
+    }
+
+    .vagas-container h2 {
+        font-size: 32px;
+    }
+
+    .vagas-container p {
+        font-size: 11px;
+    }
+
+    .footer-section {
+        padding: 14px 7% 0;
+    }
+
+    .footer-links {
+        gap: 6px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .faq-answer,
+    .faq-icon,
+    .investimento-cta,
+    .investimento-card-cta,
+    .vagas-cta,
+    .footer-links a {
+        transition: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .header-container {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .nav {
+        gap: 22px;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+
+    .hero-copy {
+        left: 7%;
+        width: 58vw;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(52px, 5.5vw, 76px);
+    }
+
+    .hero-cta {
+        min-width: 250px;
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .hero-frame {
+        left: 18px;
+        right: 18px;
+        top: 12px;
+        bottom: 12px;
+    }
+
+    .header-container {
+        padding: 18px 8%;
+        align-items: center;
+    }
+
+    .logo,
+    .logo img {
+        width: 72px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .hero-copy {
+        left: 8%;
+        top: 28%;
+        width: 78%;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(48px, 8vw, 70px);
+    }
+
+    .hero-description {
+        max-width: 580px;
+    }
+
+    .hero-badge {
+        right: 8%;
+        bottom: 8%;
+
+        width: 120px;
+        height: 120px;
+
+        font-size: 9px;
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        min-height: 100svh;
+    }
+
+
+    /* =========================
+       MOLDURA
+    ========================= */
+
+    .hero-frame {
+        left: 12px;
+        right: 12px;
+        top: 10px;
+        bottom: 10px;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header-container {
+        width: 100%;
+        min-height: 90px;
+
+        padding: 18px 8%;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+
+    /* =========================
+       LOGO
+    ========================= */
+
+    .logo,
+    .logo img {
+        width: 54px;
+        max-width: 54px;
+    }
+
+    .logo {
+        margin-left: 2px;
+        margin-top: 2px;
+    }
+
+
+/* =========================
+   MENU MOBILE
+========================= */
+
+.menu-mobile {
+    display: flex;
+
+    width: 32px;
+    height: 32px;
+
+    margin-top: 6px;
+    margin-right: 2px;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    position: relative;
+    z-index: 1001;
+}
+
+
+.menu-mobile span {
+    display: block;
+
+    width: 27px;
+    height: 2px;
+
+    margin: 0;
+
+    background: #f8f3ec;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* =========================
+   MENU ABERTO → X
+========================= */
+
+.menu-mobile.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-mobile.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-mobile.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav.active {
+    display: flex;
+
+    position: absolute;
+
+    top: 78px;
+    right: 8%;
+
+    width: 250px;
+
+    flex-direction: column;
+
+    padding: 18px 20px;
+
+    box-sizing: border-box;
+
+    background: rgba(35, 10, 16, 0.97);
+
+    border: 1px solid rgba(248, 243, 236, 0.25);
+
+    border-radius: 8px;
+
+    z-index: 1000;
+}
+
+
+.nav.active a {
+    display: block;
+
+    padding: 14px 5px;
+
+    color: #f8f3ec;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid rgba(248, 243, 236, 0.12);
+}
+
+
+.nav.active a:last-child {
+    border-bottom: none;
+}
+
+    /* =========================
+       VÍDEO
+    ========================= */
+
+    .hero-video {
+        object-position: center;
+    }
+
+
+    /* =========================
+       OVERLAY
+    ========================= */
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(18, 5, 9, 0.48) 0%,
+                rgba(25, 7, 12, 0.76) 55%,
+                rgba(15, 4, 8, 0.95) 100%
+            );
+    }
+
+
+    /* =========================
+       CONTEÚDO
+    ========================= */
+
+    .hero-content {
+        width: 100%;
+        min-height: 100svh;
+
+        display: flex;
+        align-items: flex-start;
+    }
+
+
+    /* =========================
+       BLOCO PRINCIPAL
+    ========================= */
+
+    .hero-copy {
+        position: relative;
+
+        left: 0;
+        top: auto;
+
+        width: 88%;
+        max-width: none;
+
+        margin-left: 8%;
+
+        padding-top: 245px;
+    }
+
+
+    /* =========================
+       MENTORIA
+    ========================= */
+
+    .hero-eyebrow {
+        display: block;
+
+        width: max-content;
+        max-width: none;
+
+        margin-bottom: 20px;
+
+        font-size: 10px;
+        line-height: 1.1;
+
+        letter-spacing: 1.1px;
+
+        white-space: nowrap;
+
+        text-align: left;
+    }
+
+
+    /* =========================
+       TÍTULO PRINCIPAL
+       2–3 LINHAS
+    ========================= */
+
+    .hero-copy h1 {
+        width: 100%;
+        max-width: 320px;
+
+        margin: 0;
+
+        font-size: 40px;
+        line-height: 0.96;
+
+        letter-spacing: -0.5px;
+
+        font-weight: 700;
+
+        text-align: left;
+    }
+
+
+    /* DESTAQUE */
+
+    .hero-copy h1 span {
+        display: inline;
+
+        color: #8F3948;
+    }
+
+
+    /* =========================
+       DESCRIÇÃO
+       2–3 LINHAS
+    ========================= */
+
+    .hero-description {
+        width: 100%;
+        max-width: 285px;
+
+        margin-top: 28px;
+
+        font-size: 14px;
+        line-height: 1.6;
+
+        font-weight: 400;
+
+        text-align: left;
+    }
+
+
+    /* =========================
+       AÇÕES
+    ========================= */
+
+    .hero-actions {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-top: 34px;
+
+        gap: 0;
+    }
+
+
+    /* =========================
+       PLAY
+       FICA NA LATERAL
+    ========================= */
+
+    .hero-play {
+        display: flex;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 12px;
+
+        font-size: 10px;
+
+        letter-spacing: 1px;
+
+        text-align: left;
+    }
+
+
+    .play-circle {
+        width: 52px;
+        height: 52px;
+    }
+
+
+   /* =========================
+   BOTÃO
+   MAIS ABAIXO + CENTRALIZADO
+========================= */
+
+/* =========================
+   BOTÃO
+   MAIS ABAIXO + CENTRALIZADO
+========================= */
+
+.hero-cta {
+    width: 280px;
+    min-width: 0;
+    max-width: 280px;
+
+    height: 64px;
+
+    margin-top: 55px;
+
+    align-self: flex-start;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    border-radius: 38px;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.hero-cta::before {
+    inset: 5px;
+    border-radius: 32px;
+}
+
+
+    /* =========================
+       MODAL
+    ========================= */
+
+    .video-modal {
+        padding: 15px;
+    }
+
+    .video-close {
+        top: -48px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE PEQUENO
+===================================================== */
+
+@media (max-width: 400px) {
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header-container {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+
+    /* =========================
+       LOGO
+    ========================= */
+
+    .logo,
+    .logo img {
+        width: 52px;
+        max-width: 52px;
+    }
+
+
+    /* =========================
+       CONTEÚDO
+    ========================= */
+
+    .hero-content {
+        width: 100%;
+        min-height: 100svh;
+    }
+
+
+    .hero-copy {
+        position: relative;
+
+        left: 0;
+        top: auto;
+
+        width: 88%;
+        max-width: none;
+
+        margin-left: 8%;
+
+        padding-top: 225px;
+    }
+
+
+    /* =========================
+       MENTORIA
+    ========================= */
+.hero-eyebrow {
+    width: max-content;
+    max-width: none;
+
+    margin-bottom: 19px;
+
+    font-size: 9.5px;
+    line-height: 1.1;
+
+    letter-spacing: 1.1px;
+
+    white-space: nowrap;
+
+    text-align: left;
+}
+
+
+    /* =========================
+       TÍTULO
+       3 LINHAS
+    ========================= */
+
+    .hero-copy h1 {
+      width: 100%;
+    max-width: 330px;
+
+        margin: 0;
+
+        font-size: 38px;
+        line-height: 0.96;
+
+        letter-spacing: -0.4px;
+
+        text-align: left;
+    }
+
+
+    /* =========================
+       DESTAQUE
+    ========================= */
+
+    .hero-copy h1 span {
+        display: inline;
+
+        color: #8F3948;
+    }
+
+
+    /* =========================
+       DESCRIÇÃO
+       2–3 LINHAS
+    ========================= */
+
+.hero-description {
+    width: 100%;
+    max-width: 310px;
+
+    margin-top: 27px;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    text-align: left;
+}
+
+
+    /* =========================
+       AÇÕES
+    ========================= */
+
+    .hero-actions {
+        width: 100%;
+
+        align-items: flex-start;
+
+        margin-top: 34px;
+
+        gap: 50px;
+    }
+
+
+    /* =========================
+       PLAY
+       LATERAL
+    ========================= */
+
+    .hero-play {
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 12px;
+
+        font-size: 10px;
+    }
+
+
+    .play-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+
+/* =========================
+   BOTÃO
+   BEM MAIS ABAIXO
+   CENTRALIZADO
+========================= */
+
+.hero-cta {
+    width: 280px;
+    min-width: 0;
+    max-width: calc(100vw - 50px);
+
+    height: 64px;
+
+    margin-top: 55px;
+
+    align-self: flex-start;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    border-radius: 38px;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.hero-cta::before {
+    inset: 5px;
+    border-radius: 32px;
+}
+}
