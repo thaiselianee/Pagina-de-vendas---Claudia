@@ -18,11 +18,11 @@
 <body>
 
 
-    <!-- =====================================================
+   <!-- =====================================================
          HERO
     ====================================================== -->
 
-    <section class="hero" id="inicio">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
 
 
         <!-- =================================================
@@ -35,7 +35,7 @@
             muted
             loop
             playsinline
-            preload="auto"
+            preload="metadata"
         >
             <source src="img/video-pro.mp4" type="video/mp4">
 
@@ -48,6 +48,23 @@
         <div class="hero-overlay"></div>
 
         <div class="hero-vignette"></div>
+        
+<!-- Detalhe botânico sutil do fundo -->
+<svg class="hero-botanical" viewBox="0 0 260 420"
+     fill="none" aria-hidden="true">
+    <g stroke="currentColor" stroke-width="1.5"
+       stroke-linecap="round" stroke-linejoin="round">
+        <path d="M35 405 C80 330 112 250 126 170 C137 112 142 67 132 20" />
+        <path d="M91 304 C55 281 33 251 24 214 C57 225 82 251 91 304Z" />
+        <path d="M103 270 C139 245 165 213 177 177 C142 187 116 216 103 270Z" />
+        <path d="M116 218 C78 198 56 171 48 139 C82 151 107 177 116 218Z" />
+        <path d="M126 171 C158 148 179 118 185 86 C155 101 135 127 126 171Z" />
+        <path d="M132 120 C106 99 94 73 93 45 C117 59 131 85 132 120Z" />
+        <path d="M132 81 C153 63 165 42 167 17 C145 30 134 52 132 81Z" />
+        <path d="M67 345 C42 337 22 319 10 294 C37 298 58 316 67 345Z" />
+        <path d="M80 326 C111 310 133 286 145 256 C115 265 92 289 80 326Z" />
+    </g>
+</svg>
 
 
         <!-- MOLDURA -->
@@ -64,26 +81,23 @@
             <div class="header-container">
 
 
-                <!-- LOGO -->
-
-                <a href="#inicio" class="logo">
-
-                    <img
-                        src="img/logo-Claudia.png"
-                        alt="Cláudia" >
-
-                </a>
+            <!-- NOME DA MENTORIA -->
+            <a href="#inicio" class="hero-brand-name" aria-label="Mentoria Blindagem Emocional">
+                <span>MENTORIA</span>
+                <strong>BLINDAGEM</strong>
+                <small>EMOCIONAL</small>
+            </a>
 
 
                 <!-- NAVEGAÇÃO -->
 
-                <nav class="nav">
+                <nav class="nav" id="menu-navegacao" aria-label="Navegação principal">
 
                     <a href="#metodo">
                         Método
                     </a>
 
-                    <a href="#recebe">
+                    <a href="#o-que-voce-recebe">
                         O que você recebe
                     </a>
 
@@ -105,6 +119,9 @@
 
                 </nav>
 
+                <div class="hero-brand-note" aria-label="Mentoria Blindagem com Cláudia Cardoso">
+                    MENTORIA BLINDAGEM<br>COM CLÁUDIA DEN
+                </div>
 
                 <!-- MENU MOBILE -->
 
@@ -112,6 +129,8 @@
                     class="menu-mobile"
                     type="button"
                     aria-label="Abrir menu"
+                    aria-controls="menu-navegacao"
+                    aria-expanded="false"
                 >
 
                     <span></span>
@@ -144,14 +163,9 @@
 
                 <!-- HEADLINE -->
 
-                <h1>
-
-                    Mesmo sabendo que ele
-
-                    <span>
-                        não vai mudar...
-                    </span>
-
+               <h1 id="hero-title">
+                    Mesmo sabendo que
+                    <span>ele não vai mudar...</span>
                 </h1>
 
 
@@ -170,35 +184,10 @@
                 ================================================== -->
 
                 <div class="hero-actions">
-
-
-                    <!-- PLAY -->
-
-                    <button
-                        class="hero-play"
-                        id="openVideo"
-                        type="button"
-                    >
-
-                        <span class="play-circle">
-
-                            <span class="play-icon"></span>
-
-                        </span>
-
-                        <span class="play-text">
-
-                            Assista ao vídeo
-
-                        </span>
-
-                    </button>
-
-
-                    <!-- CTA -->
+<!-- CTA: substituir o destino pelo link oficial do checkout Hotmart antes de publicar. -->
 
                     <a
-                        href="#vaga"
+                        href="INSERIR_LINK_CHECKOUT_HOTMART"
                         class="hero-cta"
                     >
 
@@ -212,9 +201,15 @@
 
             </div>
 
-
-
-
+            <div class="hero-media" aria-label="Vídeo de apresentação da mentoria">
+                <video class="hero-media-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+                    <source src="img/video-pro.mp4" type="video/mp4">
+                </video>
+                <button class="hero-media-play" id="openVideo" type="button" aria-label="Reproduzir vídeo de apresentação">
+                    <span class="play-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Assista ao vídeo</span>
+                </button>
+            </div>
 
         </div>
 
@@ -225,10 +220,12 @@
     <!-- =====================================================
          MODAL DO VÍDEO
     ====================================================== -->
-
     <div
         class="video-modal"
         id="videoModal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Vídeo da Mentoria Blindagem Emocional"
         aria-hidden="true"
     >
 
@@ -272,11 +269,20 @@
     </div>
 
 
-    <!-- =====================================================
+   
+<!-- =====================================================
      TRANSIÇÃO / RECONHECIMENTO
 ===================================================== -->
 
 <section class="reconhecimento-section" id="reconhecimento">
+
+    <!-- Ilustração decorativa -->
+    <img
+        class="reconhecimento-botanical"
+        src="img/flor-reconhecimento.png"
+        alt=""
+        aria-hidden="true"
+    >
 
     <div class="reconhecimento-container">
 
@@ -285,24 +291,20 @@
         </span>
 
         <h2 class="reconhecimento-title">
-            <!-- COPY A VALIDAR COM O GESTOR -->
-            VOCÊ JÁ PERCEBEU QUE
-            <span>PRECISA OLHAR PARA VOCÊ.</span>
+            Você já percebeu que
+            <span>precisa olhar para você.</span>
         </h2>
 
         <p class="reconhecimento-description">
-            <!-- COPY A VALIDAR COM O GESTOR -->
-            Aqui entra o texto oficial de transição,
-            conectando o reconhecimento da situação
-            com a apresentação do método.
+            Se você já reconhece que essa relação não vai mudar,
+            talvez seja o momento de direcionar o olhar para si
+            e para o que precisa neste momento.
         </p>
 
         <div class="reconhecimento-divider"></div>
 
         <p class="reconhecimento-highlight">
-            <!-- COPY A VALIDAR COM O GESTOR -->
-            O próximo passo começa quando você
-            decide voltar para si.
+            O método apresenta caminhos para fortalecer sua relação consigo mesma.
         </p>
 
     </div>
@@ -316,6 +318,7 @@
 
   <div class="metodo-container">
 
+    <!-- Texto e etapas do método mantidos do HTML enviado; confirmar a copy final com o gestor. -->
     <!-- BLOCO PRINCIPAL -->
     <div class="metodo-intro">
 
@@ -324,8 +327,7 @@
         <span class="metodo-label">O MÉTODO</span>
 
         <h2>
-          BLINDAGEM
-          <span>EMOCIONAL</span>
+          5 etapas para a sua blindagem
         </h2>
 
         <p class="metodo-description">
@@ -343,23 +345,18 @@
 
       </div>
 
-      <!-- IMAGEM -->
-      <div class="metodo-image">
-        <img
-          src="img/IMGmetodo1.jpg"
-          alt="Livro aberto em um ambiente acolhedor"
-        >
-      </div>
+ 
 
     </div>
 
 
-    <!-- CINCO PILARES -->
+    <!-- CINCO PILARES: nomes e descrições mantidos do rascunho; validar com o gestor. -->
     <div class="metodo-pilares">
 
       <article class="metodo-pilar">
         <span class="pilar-number">01</span>
-        <h3>Autoconhecimento</h3>
+        <span class="pilar-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="14" r="7"/><path d="M10 40c1-9 6-15 14-15s13 6 14 15H10Z"/><path d="M5 40h38"/></svg></span>
+                <h3>Autoconhecimento</h3>
         <p>
           Identifique o que te trava e o que te desequilibra.
         </p>
@@ -367,6 +364,7 @@
 
       <article class="metodo-pilar">
         <span class="pilar-number">02</span>
+        <span class="pilar-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5 40 11v11c0 11-7 18-16 22C15 40 8 33 8 22V11L24 5Z"/><path d="m17 24 5 5 10-11"/></svg></span>
         <h3>Regulação Emocional</h3>
         <p>
           Aprenda a lidar com o que sente sem se perder.
@@ -375,6 +373,7 @@
 
       <article class="metodo-pilar">
         <span class="pilar-number">03</span>
+        <span class="pilar-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="22" cy="26" r="16"/><circle cx="22" cy="26" r="9"/><circle cx="22" cy="26" r="2"/><path d="m28 20 13-13M33 7h8v8"/></svg></span>
         <h3>Limites Saudáveis</h3>
         <p>
           Reforce sua autoestima e crie novas escolhas.
@@ -383,6 +382,7 @@
 
       <article class="metodo-pilar">
         <span class="pilar-number">04</span>
+        <span class="pilar-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 43V12M24 25C14 25 10 19 10 10c9 0 14 6 14 15ZM24 33c10 0 14-6 14-15-9 0-14 6-14 15ZM24 18c0-8 5-12 13-14 1 9-4 14-13 14Z"/></svg></span>
         <h3>Reconexão com Você</h3>
         <p>
           Volte a se sentir inteira, forte e em paz.
@@ -391,6 +391,7 @@
 
       <article class="metodo-pilar">
         <span class="pilar-number">05</span>
+        <span class="pilar-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3v9M24 36v9M3 24h9M36 24h9M9 9l7 7M32 32l7 7M39 9l-7 7M16 32l-7 7"/><circle cx="24" cy="24" r="7"/></svg></span>
         <h3>Liberdade</h3>
         <p>
           Construa a vida que você escolhe, sem depender de ninguém.
@@ -400,10 +401,10 @@
     </div>
 
 
-    <!-- CTA -->
+    <!-- CTA: substituir o destino pelo link oficial do checkout Hotmart antes de publicar. -->
     <div class="metodo-cta-area">
-      <a href="#vaga" class="metodo-cta">
-        QUERO MINHA VAGA
+      <a href="INSERIR_LINK_CHECKOUT_HOTMART" class="metodo-cta">
+        Quero minha vaga
       </a>
     </div>
 
@@ -416,6 +417,7 @@
      O QUE VOCÊ RECEBE
 ===================================================== -->
 
+<div class="recebe-bonus-layout">
 <section class="recebe-section" id="o-que-voce-recebe">
     <div class="recebe-container">
 
@@ -436,12 +438,13 @@
                 para aplicar no seu dia a dia.
             </p>
 
-            <a href="#inscricao" class="recebe-cta">
-                QUERO MINHA VAGA
+            <a href="INSERIR_LINK_CHECKOUT_HOTMART" class="recebe-cta">
+                Quero minha vaga
             </a>
 
         </div>
 
+        <!-- Entregáveis descritos neste rascunho; confirmar os itens finais da oferta. -->
         <!-- CARDS À DIREITA -->
         <div class="recebe-grid">
 
@@ -534,10 +537,9 @@
                         <path d="M8 14h3M8 17h6"/>
                     </svg>
                 </div>
-                <h3>ACESSO POR 12 MESES</h3>
+                <h3>ACESSO AOS CONTEÚDOS</h3>
                 <p>
-                    Reveja os conteúdos sempre
-                    que precisar.
+                    Consulte as condições e o período de acesso da oferta.
                 </p>
             </article>
 
@@ -603,6 +605,7 @@
         </div>
 
 
+        <!-- Bônus descritos neste rascunho; confirmar os nomes e conteúdos com o gestor. -->
         <!-- CARDS DE BÔNUS -->
         <div class="bonus-grid">
 
@@ -715,8 +718,8 @@
         <!-- BOTÃO — AGORA FICA NO FINAL -->
         <div class="bonus-cta-area">
 
-            <a href="#inscricao" class="bonus-cta">
-                QUERO MINHA VAGA
+            <a href="INSERIR_LINK_CHECKOUT_HOTMART" class="bonus-cta">
+                Quero minha vaga
             </a>
 
         </div>
@@ -724,7 +727,7 @@
     </div>
 
 </section>
-
+</div>
 
 <!-- =====================================================
      PARA QUEM É / PARA QUEM NÃO É
@@ -734,61 +737,56 @@
 
     <div class="perfil-container">
 
-        <!-- CABEÇALHO -->
-        <div class="perfil-intro">
-
-            <span class="perfil-label">
-                PARA QUEM É
-            </span>
-
-            <h2>
-                ESSA JORNADA É
-                <span>PARA VOCÊ?</span>
-            </h2>
-
-            <p>
-                <!-- COPY A VALIDAR COM O GESTOR -->
-                Aqui entra a introdução oficial da seção.
-            </p>
-
-        </div>
-
-
-        <!-- DOIS BLOCOS -->
         <div class="perfil-grid">
 
             <!-- PARA QUEM É -->
             <article class="perfil-card perfil-card--sim">
 
-                <span class="perfil-card-label">
-                    PARA QUEM É
-                </span>
+                <div class="perfil-card-header">
+                    <span class="perfil-card-icon">✓</span>
 
-                <h3>
-                    <!-- COPY A VALIDAR -->
-                    É PARA VOCÊ SE...
-                </h3>
+                    <div>
+                        <span class="perfil-card-label">
+                            PARA QUEM É
+                        </span>
 
-                <ul>
+                        <h3>É para você se...</h3>
+                    </div>
+                </div>
+
+                <ul class="perfil-list">
 
                     <li>
-                        <span>01</span>
-                        <p>Item oficial a validar.</p>
+                        <span class="perfil-number">01</span>
+                        <p>
+                            Está ou esteve em uma relação tóxica,
+                            abusiva ou com alguém com comportamento
+                            narcisista.
+                        </p>
                     </li>
 
                     <li>
-                        <span>02</span>
-                        <p>Item oficial a validar.</p>
+                        <span class="perfil-number">02</span>
+                        <p>
+                            Sente que precisa recuperar sua clareza,
+                            autoestima e segurança emocional.
+                        </p>
                     </li>
 
                     <li>
-                        <span>03</span>
-                        <p>Item oficial a validar.</p>
+                        <span class="perfil-number">03</span>
+                        <p>
+                            Quer compreender seus padrões e não repetir
+                            os mesmos ciclos.
+                        </p>
                     </li>
 
                     <li>
-                        <span>04</span>
-                        <p>Item oficial a validar.</p>
+                        <span class="perfil-number">04</span>
+                        <p>
+                            Busca voltar a confiar em si e fazer escolhas
+                            mais alinhadas com quem você é.
+                        </p>
                     </li>
 
                 </ul>
@@ -799,35 +797,42 @@
             <!-- PARA QUEM NÃO É -->
             <article class="perfil-card perfil-card--nao">
 
-                <span class="perfil-card-label">
-                    PARA QUEM NÃO É
-                </span>
+                <div class="perfil-card-header">
+                    <span class="perfil-card-icon perfil-card-icon--x">×</span>
 
-                <h3>
-                    <!-- COPY A VALIDAR -->
-                    TALVEZ NÃO SEJA PARA VOCÊ SE...
-                </h3>
+                    <div>
+                        <span class="perfil-card-label">
+                            PARA QUEM NÃO É
+                        </span>
 
-                <ul>
+                        <h3>Talvez não seja para você se...</h3>
+                    </div>
+                </div>
+
+                <ul class="perfil-list">
 
                     <li>
-                        <span>01</span>
-                        <p>Item oficial a validar.</p>
+                        <span class="perfil-number">01</span>
+                        <p>
+                            Procura uma fórmula rápida para resolver
+                            uma situação complexa.
+                        </p>
                     </li>
 
                     <li>
-                        <span>02</span>
-                        <p>Item oficial a validar.</p>
+                        <span class="perfil-number">02</span>
+                        <p>
+                            Espera apenas motivação, sem disposição
+                            para olhar para o próprio processo.
+                        </p>
                     </li>
 
                     <li>
-                        <span>03</span>
-                        <p>Item oficial a validar.</p>
-                    </li>
-
-                    <li>
-                        <span>04</span>
-                        <p>Item oficial a validar.</p>
+                        <span class="perfil-number">03</span>
+                        <p>
+                            Não está aberta a reconhecer padrões e
+                            construir novas escolhas.
+                        </p>
                     </li>
 
                 </ul>
@@ -839,6 +844,7 @@
     </div>
 
 </section>
+
 <!-- =====================================================
      DEPOIMENTOS
 ===================================================== -->
@@ -851,19 +857,15 @@
             <span class="depoimentos-label">DEPOIMENTOS</span>
 
             <h2>
-                ELAS JÁ VIVERAM
-                <span>ESSA TRANSFORMAÇÃO.</span>
+                ESPAÇO RESERVADO
+                <span>PARA DEPOIMENTOS.</span>
             </h2>
 
             <p class="depoimentos-description">
-                Histórias reais de mulheres que escolheram
-                se reconectar consigo mesmas e transformar
-                suas vidas.
+                Depoimentos reais aprovados serão inseridos aqui após validação.
             </p>
 
-            <a href="#depoimentos-lista" class="depoimentos-cta">
-                CONHEÇA ESSAS HISTÓRIAS
-            </a>
+
         </div>
 
         <!-- CARROSSEL -->
@@ -899,13 +901,10 @@
                             </svg>
                         </div>
 
-                        <div class="depoimento-stars" aria-hidden="true">
-                            ★★★★★
-                        </div>
+                        <span class="depoimento-placeholder-label">PLACEHOLDER — AGUARDANDO APROVAÇÃO</span>
 
                         <p class="depoimento-text">
-                            [Inserir depoimento real da aluna
-                            após aprovação.]
+                            [Depoimento real aprovado a inserir.]
                         </p>
 
                         <span class="depoimento-name">
@@ -925,13 +924,10 @@
                             </svg>
                         </div>
 
-                        <div class="depoimento-stars" aria-hidden="true">
-                            ★★★★★
-                        </div>
+                        <span class="depoimento-placeholder-label">PLACEHOLDER — AGUARDANDO APROVAÇÃO</span>
 
                         <p class="depoimento-text">
-                            [Espaço reservado para uma
-                            experiência real e autorizada.]
+                            [Depoimento real aprovado a inserir.]
                         </p>
 
                         <span class="depoimento-name">
@@ -951,13 +947,10 @@
                             </svg>
                         </div>
 
-                        <div class="depoimento-stars" aria-hidden="true">
-                            ★★★★★
-                        </div>
+                        <span class="depoimento-placeholder-label">PLACEHOLDER — AGUARDANDO APROVAÇÃO</span>
 
                         <p class="depoimento-text">
-                            [Inserir relato de uma participante
-                            sobre sua experiência com o método.]
+                            [Depoimento real aprovado a inserir.]
                         </p>
 
                         <span class="depoimento-name">
@@ -977,13 +970,10 @@
                             </svg>
                         </div>
 
-                        <div class="depoimento-stars" aria-hidden="true">
-                            ★★★★★
-                        </div>
+                        <span class="depoimento-placeholder-label">PLACEHOLDER — AGUARDANDO APROVAÇÃO</span>
 
                         <p class="depoimento-text">
-                            [Espaço reservado para outro
-                            depoimento real e autorizado.]
+                            [Depoimento real aprovado a inserir.]
                         </p>
 
                         <span class="depoimento-name">
@@ -1003,13 +993,10 @@
                             </svg>
                         </div>
 
-                        <div class="depoimento-stars" aria-hidden="true">
-                            ★★★★★
-                        </div>
+                        <span class="depoimento-placeholder-label">PLACEHOLDER — AGUARDANDO APROVAÇÃO</span>
 
                         <p class="depoimento-text">
-                            [Espaço reservado para uma história
-                            real de uma participante.]
+                            [Depoimento real aprovado a inserir.]
                         </p>
 
                         <span class="depoimento-name">
@@ -1089,10 +1076,7 @@
             </h2>
 
             <p>
-                Esse é o valor para viver uma transformação
-                profunda, com acesso ao método completo
-                e aos bônus exclusivos para dar esse passo
-                em direção a uma nova vida.
+Consulte os detalhes da oferta, dos conteúdos incluídos e das condições de pagamento antes de finalizar sua inscrição.
             </p>
 
     
@@ -1122,10 +1106,9 @@
                 <h3>O QUE JÁ CUSTOU</h3>
 
                 <ul>
-                    <li>Anos de sofrimento</li>
-                    <li>Autossabotagem</li>
-                    <li>Saúde emocional abalada</li>
-                    <li>Oportunidades perdidas</li>
+                    <li>Tempo e energia investidos na relação</li>
+                    <li>Tentativas de resolver a situação</li>
+                    <li>Impactos na rotina e no bem-estar</li>
                 </ul>
 
             </article>
@@ -1151,10 +1134,9 @@
                 <h3>O QUE CUSTARIA SEPARADO</h3>
 
                 <ul>
-                    <li>Terapia individual</li>
-                    <li>Cursos e formações</li>
-                    <li>Livros e materiais</li>
-                    <li>Suporte especializado</li>
+                    <li>Conteúdos e materiais de apoio</li>
+                    <li>Encontros e acompanhamento</li>
+                    <li>Ferramentas para aplicar o método</li>
                 </ul>
 
             </article>
@@ -1192,12 +1174,12 @@
 
             <div class="investimento-card-divider"></div>
 
-            <a href="#inscricao" class="investimento-card-cta">
-                QUERO MINHA VAGA
+            <a href="INSERIR_LINK_CHECKOUT_HOTMART" class="investimento-card-cta">
+                Quero minha vaga
             </a>
 
             <span class="investimento-card-note">
-                Acesso conforme as condições da oferta.
+                Consulte as condições da oferta no checkout.
             </span>
 
         </div>
@@ -1207,120 +1189,60 @@
 
 
 <!-- =====================================================
-     GARANTIA E FAQ
+     GARANTIA
 ===================================================== -->
 
 <section class="garantia-section" id="garantia">
+
     <div class="garantia-container">
 
-        <!-- GARANTIA -->
-        <div class="garantia-intro">
+        <!-- SELO -->
+        <div class="garantia-selo" aria-label="Garantia">
 
-            <span class="garantia-label">GARANTIA</span>
+            <div class="garantia-selo-inner">
+                <span class="garantia-selo-numero">✓</span>
+            </div>
+
+        </div>
+
+
+        <!-- INFORMAÇÕES DA GARANTIA -->
+        <div class="garantia-info">
+
+            <span class="garantia-label">
+                GARANTIA
+            </span>
 
             <h2>
-                SE NÃO FUNCIONAR,
-                <span>SEU DINHEIRO</span>
-                ESTÁ SEGURO.
+                Sua segurança também faz parte
+                <span>da sua jornada.</span>
             </h2>
 
             <p class="garantia-description">
-                Você pode conhecer o método e avaliar
-                se ele faz sentido para sua jornada,
-                respeitando as condições da garantia.
-            </p>
-
-            <div class="garantia-selo">
-                <div class="garantia-selo-inner">
-                    <span class="garantia-selo-numero">7</span>
-                    <span class="garantia-selo-dias">DIAS</span>
-                </div>
-            </div>
-
-            <p class="garantia-texto-final">
-                Experimente com tranquilidade e
-                consulte as condições de reembolso.
+                Se a Mentoria Blindagem Emocional não for o que você precisa,
+                consulte no checkout as condições e o prazo aplicáveis à garantia.
             </p>
 
         </div>
 
-        <!-- FAQ -->
-        <div class="faq-container">
 
-            <span class="faq-label">DÚVIDAS FREQUENTES</span>
-            <h2 class="faq-title">TIRE SUAS DÚVIDAS</h2>
+        <!-- DIVISOR -->
+        <div class="garantia-divider"></div>
 
-            <div class="faq-list">
 
-                <div class="faq-item">
-                    <button class="faq-question"
-                            type="button"
-                            aria-expanded="false">
-                        <span>Como funciona o método?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            Aqui será inserida a explicação
-                            oficial sobre o funcionamento
-                            do método e suas etapas.
-                        </p>
-                    </div>
-                </div>
+        <!-- AVISO -->
+        <div class="garantia-emergencia">
 
-                <div class="faq-item">
-                    <button class="faq-question"
-                            type="button"
-                            aria-expanded="false">
-                        <span>Por quanto tempo terei acesso?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            Insira aqui o período de acesso
-                            informado no briefing da oferta.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question"
-                            type="button"
-                            aria-expanded="false">
-                        <span>É necessário ter experiência?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            Inclua aqui a orientação oficial
-                            sobre os requisitos para participar.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question"
-                            type="button"
-                            aria-expanded="false">
-                        <span>E se eu não gostar?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            Consulte as condições e os prazos
-                            previstos na política de garantia
-                            da oferta.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
+            <p>
+                Se você está em perigo imediato,
+                procure ajuda local agora.
+            </p>
 
         </div>
 
     </div>
-</section>
 
+</section>
 
 
 <!-- =====================================================
@@ -1328,24 +1250,112 @@
 ===================================================== -->
 
 <section class="vagas-section" id="vagas">
+
     <div class="vagas-container">
 
-        <span class="vagas-label">VAGAS LIMITADAS</span>
+        <!-- ÍCONE -->
+        <div class="vagas-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="18" r="7"></circle>
+                <circle cx="16" cy="25" r="5"></circle>
+                <circle cx="48" cy="25" r="5"></circle>
 
-        <h2>
-            SÃO APENAS
-            <span>30 VAGAS</span>
-        </h2>
+                <path d="M21 45c0-7 5-12 11-12s11 5 11 12"></path>
+                <path d="M7 45c0-5 4-9 9-9 3 0 6 2 8 5"></path>
+                <path d="M57 45c0-5-4-9-9-9-3 0-6 2-8 5"></path>
+            </svg>
+        </div>
 
-        <p>
-            Não deixe para depois. Dê o primeiro passo
-            para uma nova conexão com você.
-        </p>
 
-        <a href="#inscricao" class="vagas-cta">
-            QUERO MINHA VAGA
+        <!-- TEXTO -->
+        <div class="vagas-info">
+
+            <h2>Vagas</h2>
+
+            <p>
+                Apenas 30 vagas disponíveis para esta turma.
+            </p>
+
+        </div>
+
+
+        <!-- BOTÃO -->
+        <a
+            href="INSERIR_LINK_CHECKOUT_HOTMART"
+            class="vagas-cta"
+        >
+            Quero minha vaga
+            <span aria-hidden="true">→</span>
         </a>
 
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OBJEÇÕES / DÚVIDAS FREQUENTES
+     Respostas pendentes de validação com o gestor.
+===================================================== -->
+<section class="faq-section" id="duvidas" aria-labelledby="faq-title">
+    <div class="faq-container">
+        <span class="faq-label">DÚVIDAS FREQUENTES</span>
+        <h2 class="faq-title" id="faq-title">TIRE SUAS DÚVIDAS</h2>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-resposta-1">
+                    <span>Como funciona o método?</span>
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-resposta-1">
+                    <p>[Inserir resposta oficial sobre o funcionamento e as etapas do método.]</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-resposta-2">
+                    <span>Por quanto tempo terei acesso?</span>
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-resposta-2">
+                    <p>[Confirmar e inserir o período de acesso aprovado para a oferta.]</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-resposta-3">
+                    <span>É necessário ter experiência?</span>
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-resposta-3">
+                    <p>[Inserir orientação aprovada sobre os requisitos para participar.]</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-resposta-4">
+                    <span>E se eu não gostar?</span>
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer" id="faq-resposta-4">
+                    <p>[Inserir as condições e o prazo de garantia confirmados para a oferta.]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     CTA FINAL
+     Texto de apoio é uma sugestão de layout e deve ser validado.
+===================================================== -->
+<section class="cta-final-section" id="cta-final" aria-labelledby="cta-final-title">
+    <div class="cta-final-container">
+        <h2 id="cta-final-title">Sua blindagem começa agora.</h2>
+        <p>Conheça as condições da Mentoria Blindagem Emocional e escolha seu próximo passo.</p>
+        <a href="INSERIR_LINK_CHECKOUT_HOTMART" class="cta-final-button">Quero minha vaga</a>
     </div>
 </section>
 
@@ -1357,24 +1367,23 @@
     <div class="footer-container">
 
         <!-- LOGO -->
-        <a href="#topo" class="footer-logo">
+        <a href="#inicio" class="footer-logo">
             <img src="img/logo-Claudia.png"
                  alt="Cláudia Dem">
         </a>
 
         <!-- TEXTO -->
         <p class="footer-copy">
-            Se você está em perigo imediato,
-            procure ajuda local especializada.
+            Se você está em perigo imediato, procure ajuda local agora.
         </p>
 
         <!-- LINKS -->
         <nav class="footer-links" aria-label="Links do rodapé">
-            <a href="#termos">Termos de uso</a>
+            <a href="INSERIR_LINK_TERMOS">Termos de uso</a>
             <span class="footer-separator">|</span>
-            <a href="#privacidade">Política de Privacidade</a>
+            <a href="INSERIR_LINK_PRIVACIDADE">Política de Privacidade</a>
             <span class="footer-separator">|</span>
-            <a href="#suporte">Suporte</a>
+            <a href="INSERIR_LINK_SUPORTE">Suporte</a>
         </nav>
 
     </div>
@@ -1385,6 +1394,7 @@
         </p>
     </div>
 </footer>
+
 
     <script src="js/script.js"></script>
 
