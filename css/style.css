@@ -97,7 +97,6 @@ body {
 /* Brilho decorativo sutil */
 
 
-
 /* =====================================================
    PONTOS DE LUZ DIFUSOS — HERO DESKTOP
 ===================================================== */
@@ -441,7 +440,6 @@ body {
     text-transform: none;
 }
 
-
 /* =====================================================
    DESCRIÇÃO
 ===================================================== */
@@ -471,7 +469,6 @@ body {
     margin-top: 28px;
 }
 
-
 /* =====================================================
    INFORMAÇÃO ABAIXO DO BOTÃO
 ===================================================== */
@@ -489,6 +486,7 @@ body {
     line-height: 1.5;
     letter-spacing: 0.5px;
 }
+
 /* =====================================================
    BOTÃO PLAY — CASO UTILIZADO
 ===================================================== */
@@ -599,22 +597,20 @@ body {
 }
 
 /* =====================================================
-   VÍDEO EM DESTAQUE
+   MOLDURA DA IMAGEM DE APRESENTAÇÃO
 ===================================================== */
 
 .hero-media {
     position: relative;
-    z-index: 6;
-    width: 51%;
-    flex: 0 1 51%;
+    z-index: 5;
+    width: 46%;
+    max-width: 650px;
+    flex: 0 1 46%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-    border: 1px solid rgba(248, 243, 236, 0.56);
-    border-radius: 5px;
-    background: #1b0b10;
-    box-shadow:
-        0 15px 45px rgba(0, 0, 0, 0.24),
-        0 0 18px rgba(232, 177, 141, 0.06);
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+    background: rgba(15, 6, 9, 0.35);
 }
 
 .hero-media-video {
@@ -622,7 +618,91 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center 12%;
+}
+
+/* Ajustes responsivos da moldura */
+
+@media (max-width: 1100px) {
+    .hero-content {
+        width: calc(100% - 100px);
+        gap: 4%;
+    }
+
+    .hero-media {
+        width: 47%;
+        max-width: 570px;
+        flex-basis: 47%;
+    }
+}
+
+@media (max-width: 850px) {
+    .hero-content {
+        flex-direction: column;
+        justify-content: center;
+        gap: 28px;
+        width: calc(100% - 64px);
+        height: auto;
+        min-height: 100%;
+        padding: 145px 0 50px;
+    }
+
+    .hero-copy {
+        width: 100%;
+        max-width: 680px;
+        flex: 0 1 auto;
+    }
+
+    .hero-media {
+        width: min(88%, 620px);
+        max-width: 620px;
+        flex: 0 0 auto;
+        aspect-ratio: 16 / 9;
+        margin: 0 auto;
+    }
+
+    .hero-media-video {
+        object-position: center 9%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content {
+        width: calc(100% - 40px);
+        gap: 22px;
+        padding: 125px 0 36px;
+    }
+
+    .hero-media {
+        width: 100%;
+        max-width: 500px;
+        aspect-ratio: 4 / 3;
+    }
+
+    .hero-media-video {
+        object-position: center 7%;
+    }
+
+    .hero-media-play {
+        width: 58px;
+        height: 58px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-content {
+        width: calc(100% - 32px);
+        gap: 18px;
+        padding-top: 115px;
+    }
+
+    .hero-media {
+        aspect-ratio: 4 / 3;
+    }
+
+    .hero-media-video {
+        object-position: center 5%;
+    }
 }
 
 /* Botão central do vídeo */
@@ -737,7 +817,6 @@ body {
     color: #fff;
 }
 
-
 /* =====================================================
    FLORES DECORATIVAS NAS EXTREMIDADES DO HERO
 ===================================================== */
@@ -797,8 +876,6 @@ body {
         transparent 100%
     );
 }
-
-
 
 
 /* =====================================================
@@ -2100,7 +2177,7 @@ padding: 38px 6% 38px;
 ===================================================== */
 
 .depoimentos-floral--left {
-    left: -235px;
+    left: -280px;
     bottom: -110px;
 
     object-position: left bottom;
@@ -2285,7 +2362,7 @@ padding: 38px 6% 38px;
 .depoimento-video-wrapper {
     position: relative;
 
-    width: 100%;
+    width: 80%;
 
     aspect-ratio: 9 / 9;
 
@@ -3547,7 +3624,7 @@ padding: 38px 6% 38px;
         1px
         minmax(230px, 0.75fr);
     align-items: center;
-    column-gap: 34px;
+    column-gap: 50px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -3555,48 +3632,31 @@ padding: 38px 6% 38px;
 
 
 /* =====================================================
-   SELO
+SELO DE GARANTIA
 ===================================================== */
 
 .garantia-selo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 88px;
-    height: 88px;
-    border: 1.5px solid #7a2635;
-    border-radius: 50%;
-    color: #7a2635;
-    box-sizing: border-box;
-    flex-shrink: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 180px;
+height: auto;
+box-sizing: border-box;
+flex-shrink: 0;
+border: none;
+border-radius: 0;
+color: inherit;
 }
 
-.garantia-selo-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 73px;
-    height: 73px;
-    border: 1px solid rgba(122, 38, 53, 0.35);
-    border-radius: 50%;
-    text-align: center;
+.garantia-selo-imagem {
+display: block;
+width: 100%;
+max-width: 180px;
+height: auto;
+object-fit: contain;
+margin-left: -110px;
 }
 
-.garantia-selo-numero {
-    font-family: "Lato", sans-serif;
-    font-size: 27px;
-    font-weight: 700;
-    line-height: 1;
-}
-
-.garantia-selo-inner > span:last-child {
-    margin-top: 4px;
-    font-family: "Lato", sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.8px;
-}
 
 
 /* =====================================================
@@ -3605,7 +3665,8 @@ padding: 38px 6% 38px;
 
 .garantia-info {
     min-width: 0;
-    max-width: 650px;
+    max-width: 700px;
+    margin-left: 20px;
 }
 
 .garantia-label {
@@ -5428,47 +5489,75 @@ padding: 38px 6% 38px;
     /* GARANTIA */
 
     .garantia-section {
+        width: 100%;
         padding: 42px 5%;
+        box-sizing: border-box;
     }
 
     .garantia-container {
-        grid-template-columns: 80px minmax(0, 1fr);
-        column-gap: 24px;
-        row-gap: 20px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
         max-width: 700px;
+        margin: 0 auto;
+        gap: 18px;
+        justify-items: center;
+        text-align: center;
     }
 
-    .garantia-selo {
-        width: 76px;
-        height: 76px;
-        justify-self: center;
-    }
-
-    .garantia-selo-inner {
-        width: 64px;
-        height: 64px;
-    }
-
-    .garantia-selo-numero {
-        font-size: 25px;
-    }
-
+    /* Permite organizar os elementos internos
+       da informação junto com o selo */
     .garantia-info {
-        max-width: 100%;
+        display: contents;
     }
 
     .garantia-label {
+        order: 1;
+        width: 100%;
         font-size: 13px;
+        line-height: 1.4;
+        text-align: center;
     }
 
     .garantia-info h2 {
-        font-size: 32px;
-        line-height: 1.08;
+        order: 2;
+        width: 100%;
+        max-width: 700px;
+        margin: 0;
+        font-size: 35px;
+        line-height: 1.15;
+        text-align: center;
+    }
+
+    .garantia-selo {
+        order: 3;
+        width: 110px;
+        height: auto;
+        margin: 4px auto 8px;
+        border: none;
+        border-radius: 0;
+        justify-self: center;
+        align-items: center;
+      
+    }
+
+    .garantia-selo-imagem {
+        display: block;
+        width: 110px;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin-left: 10px;
     }
 
     .garantia-description {
-        font-size: 15px;
-        line-height: 1.55;
+        order: 4;
+        width: 100%;
+        max-width: 680px;
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: center;
     }
 
     .garantia-divider {
@@ -5476,14 +5565,18 @@ padding: 38px 6% 38px;
     }
 
     .garantia-emergencia {
-        grid-column: 2;
-        max-width: 100%;
+        order: 5;
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 680px;
         padding-top: 4px;
+        text-align: center;
     }
 
     .garantia-emergencia p {
-        font-size: 14px;
-        line-height: 1.55;
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: center;
     }
 
     /* VAGAS */
@@ -5632,7 +5725,7 @@ padding: 38px 6% 38px;
     }
 
      .hero-content {
-        padding: 96px 5% 32px;
+        padding: 80px 5% 32px;
     }
     .hero-brand-note {
     display: none;
@@ -6539,21 +6632,27 @@ padding: 38px 6% 38px;
         text-align: center;
     }
 
-    .garantia-selo {
+        .garantia-selo {
         order: 3;
-        width: 78px;
-        height: 78px;
+        width: 110px;
+        height: auto;
         margin: 0 auto 20px;
+        border: none;
+        border-radius: 0;
+        align-items: center !important;
     }
 
-    .garantia-selo-inner {
-        width: 65px;
-        height: 65px;
+    .garantia-selo-imagem {
+        display: block;
+        width: 110px;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        align-items: center;
+        margin-left: revert-layer;
     }
 
-    .garantia-selo-numero {
-        font-size: 25px;
-    }
+
 
     .garantia-description {
         order: 4;
@@ -6776,7 +6875,7 @@ padding: 38px 6% 38px;
 @media (max-width: 400px) {
 
      .hero-content {
-        padding: 96px 4.5% 30px;
+        padding: 75px 4.5% 30px;
     }
 
     .hero-eyebrow {
@@ -7386,19 +7485,21 @@ padding: 38px 6% 38px;
         line-height: 1.1;
     }
 
-    .garantia-selo {
-        width: 72px;
-        height: 72px;
-        margin-bottom: 18px;
+   .garantia-selo {
+        order: 3;
+        width: 90px;
+        height: auto;
+        margin: 0 auto 18px;
+        border: none;
+        border-radius: 0;
     }
 
-    .garantia-selo-inner {
-        width: 60px;
-        height: 60px;
-    }
-
-    .garantia-selo-numero {
-        font-size: 23px;
+    .garantia-selo-imagem {
+        display: block;
+        width: 90px;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 
     .garantia-description {
