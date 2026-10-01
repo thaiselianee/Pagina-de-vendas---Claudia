@@ -16,267 +16,266 @@
 </head>
 
 <body>
+<!-- =====================================================
+     HERO
+====================================================== -->
 
+<section class="hero" id="inicio" aria-labelledby="hero-title">
 
-   <!-- =====================================================
-         HERO
-    ====================================================== -->
+    <!-- VÍDEO DE FUNDO -->
 
-    <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+    >
+        <source src="img/video-pro.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+    </video>
 
+    <!-- CAMADAS DO VÍDEO -->
 
-        <!-- =================================================
-             VÍDEO DE FUNDO
-        ================================================== -->
+    <div class="hero-overlay"></div>
+    <div class="hero-vignette"></div>
 
-        <video
-            class="hero-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-        >
-            <source src="img/video-pro.mp4" type="video/mp4">
+    <!-- FLORES LATERAIS -->
 
-            Seu navegador não suporta vídeo.
-        </video>
+    <img
+        src="img/inicio-flor.png"
+        class="hero-florais hero-florais-esquerda"
+        alt=""
+        aria-hidden="true"
+    >
 
+    <img
+        src="img/inicio-flor.png"
+        class="hero-florais hero-florais-direita"
+        alt=""
+        aria-hidden="true"
+    >
 
-        <!-- CAMADAS DO VÍDEO -->
+    <!-- HEADER -->
 
-        <div class="hero-overlay"></div>
+    <header class="header">
 
-        <div class="hero-vignette"></div>
-        
-<!-- Detalhe botânico sutil do fundo -->
-<svg class="hero-botanical" viewBox="0 0 260 420"
-     fill="none" aria-hidden="true">
-    <g stroke="currentColor" stroke-width="1.5"
-       stroke-linecap="round" stroke-linejoin="round">
-        <path d="M35 405 C80 330 112 250 126 170 C137 112 142 67 132 20" />
-        <path d="M91 304 C55 281 33 251 24 214 C57 225 82 251 91 304Z" />
-        <path d="M103 270 C139 245 165 213 177 177 C142 187 116 216 103 270Z" />
-        <path d="M116 218 C78 198 56 171 48 139 C82 151 107 177 116 218Z" />
-        <path d="M126 171 C158 148 179 118 185 86 C155 101 135 127 126 171Z" />
-        <path d="M132 120 C106 99 94 73 93 45 C117 59 131 85 132 120Z" />
-        <path d="M132 81 C153 63 165 42 167 17 C145 30 134 52 132 81Z" />
-        <path d="M67 345 C42 337 22 319 10 294 C37 298 58 316 67 345Z" />
-        <path d="M80 326 C111 310 133 286 145 256 C115 265 92 289 80 326Z" />
-    </g>
-</svg>
-
-
-        <!-- MOLDURA -->
-
-        <div class="hero-frame"></div>
-
-
-        <!-- =================================================
-             HEADER
-        ================================================== -->
-
-        <header class="header">
-
-            <div class="header-container">
-
+        <div class="header-container">
 
             <!-- NOME DA MENTORIA -->
-            <a href="#inicio" class="hero-brand-name" aria-label="Mentoria Blindagem Emocional">
+
+            <a
+                href="#inicio"
+                class="hero-brand-name"
+                aria-label="Mentoria Blindagem Emocional"
+            >
                 <span>MENTORIA</span>
                 <strong>BLINDAGEM</strong>
                 <small>EMOCIONAL</small>
             </a>
 
+            <!-- NAVEGAÇÃO -->
 
-                <!-- NAVEGAÇÃO -->
+            <nav
+                class="nav"
+                id="menu-navegacao"
+                aria-label="Navegação principal"
+            >
+                <a href="#metodo">Método</a>
 
-                <nav class="nav" id="menu-navegacao" aria-label="Navegação principal">
+                <a href="#o-que-voce-recebe">
+                    O que você recebe
+                </a>
 
-                    <a href="#metodo">
-                        Método
-                    </a>
+                <a href="#bonus">Bônus</a>
 
-                    <a href="#o-que-voce-recebe">
-                        O que você recebe
-                    </a>
+                <a href="#depoimentos">
+                    Depoimentos
+                </a>
 
-                    <a href="#bonus">
-                        Bônus
-                    </a>
+                <a href="#investimento">
+                    Investimento
+                </a>
 
-                    <a href="#depoimentos">
-                        Depoimentos
-                    </a>
+                <a href="#duvidas">Dúvidas</a>
+            </nav>
 
-                    <a href="#investimento">
-                        Investimento
-                    </a>
+            <!-- IDENTIFICAÇÃO -->
 
-                    <a href="#duvidas">
-                        Dúvidas
-                    </a>
-
-                </nav>
-
-                <div class="hero-brand-note" aria-label="Mentoria Blindagem com Cláudia Cardoso">
-                    MENTORIA BLINDAGEM<br>COM CLÁUDIA DEN
-                </div>
-
-                <!-- MENU MOBILE -->
-
-                <button
-                    class="menu-mobile"
-                    type="button"
-                    aria-label="Abrir menu"
-                    aria-controls="menu-navegacao"
-                    aria-expanded="false"
-                >
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                </button>
-
+            <div
+                class="hero-brand-note"
+                aria-label="Mentoria Blindagem com Cláudia Dem"
+            >
+                MENTORIA BLINDAGEM<br>
+                COM CLÁUDIA DEM
             </div>
 
-        </header>
+            <!-- MENU MOBILE -->
 
-
-        <!-- =================================================
-             CONTEÚDO HERO
-        ================================================== -->
-
-        <div class="hero-content">
-
-
-            <div class="hero-copy">
-
-
-                <!-- PEQUENO TEXTO -->
-
-                <span class="hero-eyebrow">
-                    Mentoria Blindagem Emocional
-                </span>
-
-
-                <!-- HEADLINE -->
-
-               <h1 id="hero-title">
-                    Mesmo sabendo que
-                    <span>ele não vai mudar...</span>
-                </h1>
-
-
-                <!-- DESCRIÇÃO -->
-
-                <p class="hero-description">
-
-                    Existe um momento em que você percebe que continuar
-                    tentando mudá-lo não é mais o caminho.
-
-                </p>
-
-
-                <!-- =================================================
-                     AÇÕES
-                ================================================== -->
-
-                <div class="hero-actions">
-<!-- CTA: substituir o destino pelo link oficial do checkout Hotmart antes de publicar. -->
-
-                    <a
-                        href="INSERIR_LINK_CHECKOUT_HOTMART"
-                        class="hero-cta"
-                    >
-
-                        Quero minha vaga
-
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-            <div class="hero-media" aria-label="Vídeo de apresentação da mentoria">
-                <video class="hero-media-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-                    <source src="img/video-pro.mp4" type="video/mp4">
-                </video>
-                <button class="hero-media-play" id="openVideo" type="button" aria-label="Reproduzir vídeo de apresentação">
-                    <span class="play-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Assista ao vídeo</span>
-                </button>
-            </div>
+            <button
+                class="menu-mobile"
+                type="button"
+                aria-label="Abrir menu"
+                aria-controls="menu-navegacao"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
         </div>
 
-    </section>
+    </header>
 
+    <!-- CONTEÚDO HERO -->
 
+    <div class="hero-content">
 
-    <!-- =====================================================
-         MODAL DO VÍDEO
-    ====================================================== -->
-    <div
-        class="video-modal"
-        id="videoModal"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Vídeo da Mentoria Blindagem Emocional"
-        aria-hidden="true"
-    >
+        <!-- TEXTO -->
 
-        <div class="video-modal-content">
+        <div class="hero-copy">
 
+            <!-- TARJA -->
 
-            <!-- FECHAR -->
+            <span class="hero-eyebrow">
+                MENTORIA AO VIVO · 8 SEMANAS · 30 VAGAS
+            </span>
 
-            <button
-                class="video-close"
-                id="closeVideo"
-                type="button"
-                aria-label="Fechar vídeo"
-            >
+            <!-- TÍTULO PRINCIPAL -->
 
-                ×
+            <h1 id="hero-title">
+                COMO SE LIBERTAR DA DEPENDÊNCIA EMOCIONAL DE UM NARCISISTA,
+                <span>MESMO SABENDO QUE ELE NÃO VAI MUDAR?</span>
+            </h1>
 
-            </button>
+            <!-- DESCRIÇÃO -->
 
+            <p class="hero-description">
+                Um método em 5 etapas para reconhecer o padrão,
+                devolver a culpa a quem ela pertence e reconstruir
+                sua identidade com acompanhamento ao vivo, comigo,
+                toda segunda-feira.
+            </p>
 
-            <!-- VÍDEO -->
+            <!-- BOTÃO -->
+
+            <div class="hero-actions">
+
+                <a
+                    href="INSERIR_LINK_CHECKOUT_HOTMART"
+                    class="hero-cta"
+                >
+                    QUERO MINHA VAGA
+                </a>
+
+            </div>
+
+            <!-- INFORMAÇÕES ABAIXO DO BOTÃO -->
+
+            <p class="hero-note">
+                30 vagas · turma começa 7 de setembro · garantia de 30 dias
+            </p>
+
+        </div>
+
+        <!-- VÍDEO DE APRESENTAÇÃO -->
+
+        <div
+            class="hero-media"
+            aria-label="Vídeo de apresentação da mentoria"
+        >
 
             <video
-                id="modalVideo"
-                controls
+                class="hero-media-video"
+                autoplay
+                muted
+                loop
                 playsinline
+                preload="metadata"
+                aria-hidden="true"
             >
-
-                <source
-                    src="img/video-pro.mp4"
-                    type="video/mp4"
-                >
-
-                Seu navegador não suporta vídeo.
-
+                <source src="img/video-pro.mp4" type="video/mp4">
             </video>
 
+            <!-- BOTÃO DE REPRODUÇÃO -->
+
+            <button
+                class="hero-media-play"
+                id="openVideo"
+                type="button"
+                aria-label="Reproduzir vídeo de apresentação"
+            >
+                <span
+                    class="play-icon"
+                    aria-hidden="true"
+                ></span>
+
+                <span class="sr-only">
+                    Assista ao vídeo
+                </span>
+            </button>
 
         </div>
 
     </div>
 
+</section>
 
-   
+
+<!-- =====================================================
+     MODAL DO VÍDEO
+     MANTER FORA DA SECTION HERO
+====================================================== -->
+
+<div
+    class="video-modal"
+    id="videoModal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Vídeo da Mentoria Blindagem Emocional"
+    aria-hidden="true"
+>
+
+    <div class="video-modal-content">
+
+        <!-- BOTÃO FECHAR -->
+
+        <button
+            class="video-close"
+            id="closeVideo"
+            type="button"
+            aria-label="Fechar vídeo"
+        >
+            ×
+        </button>
+
+        <!-- VÍDEO -->
+
+        <video
+            id="modalVideo"
+            controls
+            playsinline
+        >
+            <source src="img/video-pro.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+
+    </div>
+
+</div>
+
+
 <!-- =====================================================
      TRANSIÇÃO / RECONHECIMENTO
 ===================================================== -->
 
-<section class="reconhecimento-section" id="reconhecimento">
+<section
+    class="reconhecimento-section"
+    id="reconhecimento"
+>
 
-    <!-- Ilustração decorativa -->
     <img
         class="reconhecimento-botanical"
         src="img/flor-reconhecimento.png"
@@ -286,506 +285,701 @@
 
     <div class="reconhecimento-container">
 
-        <span class="reconhecimento-label">
-            RECONHECIMENTO
-        </span>
-
         <h2 class="reconhecimento-title">
-            Você já percebeu que
-            <span>precisa olhar para você.</span>
+       SE VOCÊ CHEGOU ATÉ AQUI,
+            <span>PROVAVELMENTE JÁ RECONHECE O PADRÃO</span>
         </h2>
 
         <p class="reconhecimento-description">
-            Se você já reconhece que essa relação não vai mudar,
-            talvez seja o momento de direcionar o olhar para si
-            e para o que precisa neste momento.
+            Você sabe o nome do que viveu. Talvez já tenha saído da relação,
+            ou esteja se preparando pra isso, ou ainda esteja dentro tentando
+            entender o que está acontecendo.
         </p>
 
         <div class="reconhecimento-divider"></div>
 
         <p class="reconhecimento-highlight">
-            O método apresenta caminhos para fortalecer sua relação consigo mesma.
+            E mesmo assim, entender não foi suficiente.
+        </p>
+
+        <p class="reconhecimento-description">
+            Porque saber o que aconteceu não é o mesmo que conseguir
+            reconstruir. Informação, sozinha, nunca gerou transformação.
+            Se gerasse, ler um livro seria suficiente.
+        </p>
+
+        <p class="reconhecimento-description">
+            Existe uma diferença entre sobreviver ao abuso e reconstruir
+            a própria identidade. E é exatamente essa diferença que essa
+            mentoria existe para resolver.
         </p>
 
     </div>
 
 </section>
 
-    <!-- =========================
+
+<!-- =====================================================
      SEÇÃO MÉTODO
-========================= -->
-<section class="metodo-section" id="metodo">
+===================================================== -->
 
-  <div class="metodo-container">
+<section
+    class="metodo-section"
+    id="metodo"
+>
 
-    <!-- Texto e etapas do método mantidos do HTML enviado; confirmar a copy final com o gestor. -->
-    <!-- BLOCO PRINCIPAL -->
-    <div class="metodo-intro">
+    <div class="metodo-container">
 
-      <div class="metodo-texto">
+        <div class="metodo-intro">
 
-        <span class="metodo-label">O MÉTODO</span>
+            <div class="metodo-texto">
 
-        <h2>
-          5 etapas para a sua blindagem
-        </h2>
+                <span class="metodo-label">
+                    O MÉTODO
+                </span>
 
-        <p class="metodo-description">
-          Um método prático, profundo e transformador para você se fortalecer
-          emocionalmente, romper ciclos e reconstruir sua vida com mais clareza,
-          segurança e liberdade.
-        </p>
+                <h2>
+                    MÉTODO BLINDAGEM EMOCIONAL
+                </h2>
 
-        <div class="metodo-line"></div>
+                <p class="metodo-description">
+                    Cinco etapas. Não são cinco temas, são cinco coisas
+                    que precisam acontecer dentro de você, nessa ordem,
+                    porque cada uma prepara a seguinte.
+                </p>
 
-        <p class="metodo-highlight">
-          Não se trata de mudar o outro.
-          <strong>É sobre voltar para você.</strong>
-        </p>
+                <div class="metodo-line"></div>
 
-      </div>
+                <p class="metodo-highlight">
+                    Um processo para reconhecer o padrão e reconstruir
+                    sua identidade.
+                </p>
 
- 
+            </div>
+
+        </div>
+
+        <!-- CINCO ETAPAS DO MÉTODO -->
+        <div class="metodo-pilares">
+
+            <!-- ETAPA 1 -->
+            <article class="metodo-pilar">
+
+                <span class="pilar-number">
+                    01
+                </span>
+
+                <span class="pilar-icon">
+                    <svg
+                        viewBox="0 0 48 48"
+                        aria-hidden="true"
+                    >
+                        <circle cx="24" cy="14" r="7"/>
+                        <path d="M10 40c1-9 6-15 14-15s13 6 14 15H10Z"/>
+                        <path d="M5 40h38"/>
+                    </svg>
+                </span>
+
+                <h3>
+                    RECONHECER
+                </h3>
+
+                <p>
+                    Enxergar o padrão pelo que ele é. Sair da confusão,
+                    parar de duvidar da própria memória.
+                </p>
+
+            </article>
+
+            <!-- ETAPA 2 -->
+            <article class="metodo-pilar">
+
+                <span class="pilar-number">
+                    02
+                </span>
+
+                <span class="pilar-icon">
+                    <svg
+                        viewBox="0 0 48 48"
+                        aria-hidden="true"
+                    >
+                        <path d="M24 5 40 11v11c0 11-7 18-16 22C15 40 8 33 8 22V11L24 5Z"/>
+                        <path d="m17 24 5 5 10-11"/>
+                    </svg>
+                </span>
+
+                <h3>
+                    DESROMANTIZAR
+                </h3>
+
+                <p>
+                    Desfazer a história que te prendeu. Separar quem ele
+                    é de quem você acreditou que ele fosse.
+                </p>
+
+            </article>
+
+            <!-- ETAPA 3 -->
+            <article class="metodo-pilar">
+
+                <span class="pilar-number">
+                    03
+                </span>
+
+                <span class="pilar-icon">
+                    <svg
+                        viewBox="0 0 48 48"
+                        aria-hidden="true"
+                    >
+                        <circle cx="22" cy="26" r="16"/>
+                        <circle cx="22" cy="26" r="9"/>
+                        <circle cx="22" cy="26" r="2"/>
+                        <path d="m28 20 13-13M33 7h8v8"/>
+                    </svg>
+                </span>
+
+                <h3>
+                    DEVOLVER
+                </h3>
+
+                <p>
+                    Devolver a culpa a quem ela pertence. Parar de
+                    carregar responsabilidade por comportamento que
+                    nunca foi seu.
+                </p>
+
+            </article>
+
+            <!-- ETAPA 4 -->
+            <article class="metodo-pilar">
+
+                <span class="pilar-number">
+                    04
+                </span>
+
+                <span class="pilar-icon">
+                    <svg
+                        viewBox="0 0 48 48"
+                        aria-hidden="true"
+                    >
+                        <path d="M24 43V12M24 25C14 25 10 19 10 10c9 0 14 6 14 15ZM24 33c10 0 14-6 14-15-9 0-14 6-14 15ZM24 18c0-8 5-12 13-14 1 9-4 14-13 14Z"/>
+                    </svg>
+                </span>
+
+                <h3>
+                    RECONSTRUIR
+                </h3>
+
+                <p>
+                    Recuperar identidade, voz e limites. Voltar a confiar
+                    na própria percepção.
+                </p>
+
+            </article>
+
+            <!-- ETAPA 5 -->
+            <article class="metodo-pilar">
+
+                <span class="pilar-number">
+                    05
+                </span>
+
+                <span class="pilar-icon">
+                    <svg
+                        viewBox="0 0 48 48"
+                        aria-hidden="true"
+                    >
+                        <path d="M24 3v9M24 36v9M3 24h9M36 24h9M9 9l7 7M32 32l7 7M39 9l-7 7M16 32l-7 7"/>
+                        <circle cx="24" cy="24" r="7"/>
+                    </svg>
+                </span>
+
+                <h3>
+                    BLINDAR
+                </h3>
+
+                <p>
+                    Sustentar o que foi reconstruído. Sair da dependência
+                    emocional e desenvolver uma estrutura tão firme que
+                    o padrão não encontre mais espaço.
+                </p>
+
+            </article>
+
+        </div>
+
+        <div class="metodo-cta-area">
+
+            <a
+                href="INSERIR_LINK_CHECKOUT_HOTMART"
+                class="metodo-cta"
+            >
+                QUERO MINHA VAGA
+            </a>
+
+        </div>
 
     </div>
-
-
-    <!-- CINCO PILARES: nomes e descrições mantidos do rascunho; validar com o gestor. -->
-    <div class="metodo-pilares">
-
-      <article class="metodo-pilar">
-        <span class="pilar-number">01</span>
-        <span class="pilar-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="14" r="7"/><path d="M10 40c1-9 6-15 14-15s13 6 14 15H10Z"/><path d="M5 40h38"/></svg></span>
-                <h3>Autoconhecimento</h3>
-        <p>
-          Identifique o que te trava e o que te desequilibra.
-        </p>
-      </article>
-
-      <article class="metodo-pilar">
-        <span class="pilar-number">02</span>
-        <span class="pilar-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5 40 11v11c0 11-7 18-16 22C15 40 8 33 8 22V11L24 5Z"/><path d="m17 24 5 5 10-11"/></svg></span>
-        <h3>Regulação Emocional</h3>
-        <p>
-          Aprenda a lidar com o que sente sem se perder.
-        </p>
-      </article>
-
-      <article class="metodo-pilar">
-        <span class="pilar-number">03</span>
-        <span class="pilar-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="22" cy="26" r="16"/><circle cx="22" cy="26" r="9"/><circle cx="22" cy="26" r="2"/><path d="m28 20 13-13M33 7h8v8"/></svg></span>
-        <h3>Limites Saudáveis</h3>
-        <p>
-          Reforce sua autoestima e crie novas escolhas.
-        </p>
-      </article>
-
-      <article class="metodo-pilar">
-        <span class="pilar-number">04</span>
-        <span class="pilar-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 43V12M24 25C14 25 10 19 10 10c9 0 14 6 14 15ZM24 33c10 0 14-6 14-15-9 0-14 6-14 15ZM24 18c0-8 5-12 13-14 1 9-4 14-13 14Z"/></svg></span>
-        <h3>Reconexão com Você</h3>
-        <p>
-          Volte a se sentir inteira, forte e em paz.
-        </p>
-      </article>
-
-      <article class="metodo-pilar">
-        <span class="pilar-number">05</span>
-        <span class="pilar-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3v9M24 36v9M3 24h9M36 24h9M9 9l7 7M32 32l7 7M39 9l-7 7M16 32l-7 7"/><circle cx="24" cy="24" r="7"/></svg></span>
-        <h3>Liberdade</h3>
-        <p>
-          Construa a vida que você escolhe, sem depender de ninguém.
-        </p>
-      </article>
-
-    </div>
-
-
-    <!-- CTA: substituir o destino pelo link oficial do checkout Hotmart antes de publicar. -->
-    <div class="metodo-cta-area">
-      <a href="INSERIR_LINK_CHECKOUT_HOTMART" class="metodo-cta">
-        Quero minha vaga
-      </a>
-    </div>
-
-  </div>
 
 </section>
+
 
 
 <!-- =====================================================
      O QUE VOCÊ RECEBE
 ===================================================== -->
 
-<div class="recebe-bonus-layout">
-<section class="recebe-section" id="o-que-voce-recebe">
+<section
+    class="recebe-section"
+    id="o-que-voce-recebe"
+>
+
     <div class="recebe-container">
 
-        <!-- TEXTO À ESQUERDA -->
         <div class="recebe-intro">
 
-            <span class="recebe-label">O QUE VOCÊ RECEBE</span>
+            <span class="recebe-label">
+                O QUE VOCÊ RECEBE
+            </span>
 
             <h2>
                 MAIS DO QUE AULAS,
-                <span>É UMA JORNADA COMPLETA.</span>
+                <span>UM PROCESSO COM ACOMPANHAMENTO.</span>
             </h2>
 
             <p class="recebe-description">
-                Você terá acesso a um conteúdo completo,
-                direto ao ponto, com acompanhamento,
-                ferramentas práticas e materiais exclusivos
-                para aplicar no seu dia a dia.
+                São 8 aulas principais, uma por semana, dentro da comunidade
+                com exercícios práticos em cada uma. Encontros ao vivo comigo,
+                toda segunda-feira, 7 de setembro em diante gravados, para você
+                assistir de novo quando precisar. Acesso à comunidade, com área
+                de membros, feed, chat e acompanhamento do seu progresso.
+                Um espaço com mulheres que entendem exatamente o que você
+                está vivendo porque já viveram, ou estão vivendo agora,
+                a mesma coisa.
             </p>
 
-            <a href="INSERIR_LINK_CHECKOUT_HOTMART" class="recebe-cta">
-                Quero minha vaga
+            <a
+                href="INSERIR_LINK_CHECKOUT_HOTMART"
+                class="recebe-cta"
+            >
+                QUERO MINHA VAGA
             </a>
 
         </div>
 
-        <!-- Entregáveis descritos neste rascunho; confirmar os itens finais da oferta. -->
-        <!-- CARDS À DIREITA -->
+
+        <!-- 4 CARDS DA COPY -->
+
         <div class="recebe-grid">
 
             <!-- CARD 1 -->
             <article class="recebe-card">
+
                 <div class="recebe-icon">
-                    <svg viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="1.5"
-                         stroke-linecap="round" stroke-linejoin="round"
-                         aria-hidden="true">
-                        <rect x="3" y="4" width="18" height="16" rx="2"/>
-                        <circle cx="12" cy="12" r="4"/>
-                        <path d="m11 10 3 2-3 2z" fill="currentColor"
-                              stroke="none"/>
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="16"
+                            rx="2"
+                        />
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                        />
+
+                        <path
+                            d="m11 10 3 2-3 2z"
+                            fill="currentColor"
+                            stroke="none"
+                        />
                     </svg>
+
                 </div>
-                <h3>AULAS EM VÍDEO</h3>
+
+                <h3>
+                    8 AULAS PRINCIPAIS
+                </h3>
+
                 <p>
-                    Assista às aulas no seu ritmo,
-                    de onde estiver.
+                    Uma aula por semana, dentro da comunidade,
+                    com exercícios práticos em cada etapa.
                 </p>
+
             </article>
+
 
             <!-- CARD 2 -->
             <article class="recebe-card">
+
                 <div class="recebe-icon">
-                    <svg viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="1.5"
-                         stroke-linecap="round" stroke-linejoin="round"
-                         aria-hidden="true">
-                        <path d="M6 3h9l4 4v14H6z"/>
-                        <path d="M14 3v5h5M9 13h7M9 17h7"/>
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <circle
+                            cx="12"
+                            cy="8"
+                            r="3"
+                        />
+
+                        <circle
+                            cx="5"
+                            cy="10"
+                            r="2"
+                        />
+
+                        <circle
+                            cx="19"
+                            cy="10"
+                            r="2"
+                        />
+
+                        <path
+                            d="M6 20v-2a6 6 0 0 1 12 0v2z"
+                        />
+
+                        <path
+                            d="M2 19v-1a3 3 0 0 1 4-2.8M22 19v-1a3 3 0 0 0-4-2.8"
+                        />
                     </svg>
+
                 </div>
-                <h3>MATERIAL DE APOIO</h3>
+
+                <h3>
+                    ENCONTROS AO VIVO
+                </h3>
+
                 <p>
-                    Guias, exercícios e materiais
-                    exclusivos.
+                    Encontros ao vivo comigo, toda segunda-feira,
+                    gravados para você assistir de novo quando precisar.
                 </p>
+
             </article>
+
 
             <!-- CARD 3 -->
             <article class="recebe-card">
+
                 <div class="recebe-icon">
-                    <svg viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="1.5"
-                         stroke-linecap="round" stroke-linejoin="round"
-                         aria-hidden="true">
-                        <circle cx="12" cy="8" r="3"/>
-                        <circle cx="5" cy="10" r="2"/>
-                        <circle cx="19" cy="10" r="2"/>
-                        <path d="M6 20v-2a6 6 0 0 1 12 0v2z"/>
-                        <path d="M2 19v-1a3 3 0 0 1 4-2.8M22 19v-1a3 3 0 0 0-4-2.8"/>
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                        />
+
+                        <circle
+                            cx="10"
+                            cy="7"
+                            r="4"
+                        />
+
+                        <path
+                            d="M20 8v6M17 11h6"
+                        />
                     </svg>
+
                 </div>
-                <h3>ENCONTROS AO VIVO</h3>
+
+                <h3>
+                    COMUNIDADE
+                </h3>
+
                 <p>
-                    Tire dúvidas e aprofunde
-                    sua experiência.
+                    Acesso à comunidade, com área de membros,
+                    feed, chat e acompanhamento do seu progresso.
                 </p>
+
             </article>
+
 
             <!-- CARD 4 -->
             <article class="recebe-card">
-                <div class="recebe-icon">
-                    <svg viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="1.5"
-                         stroke-linecap="round" stroke-linejoin="round"
-                         aria-hidden="true">
-                        <circle cx="12" cy="12" r="9"/>
-                        <path d="M8 12.5 10.5 15 16 9"/>
-                    </svg>
-                </div>
-                <h3>ACOMPANHAMENTO</h3>
-                <p>
-                    Apoio para colocar o método
-                    em prática.
-                </p>
-            </article>
 
-            <!-- CARD 5 -->
-            <article class="recebe-card">
                 <div class="recebe-icon">
-                    <svg viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="1.5"
-                         stroke-linecap="round" stroke-linejoin="round"
-                         aria-hidden="true">
-                        <rect x="4" y="5" width="16" height="16" rx="2"/>
-                        <path d="M8 3v4M16 3v4M4 10h16"/>
-                        <path d="M8 14h3M8 17h6"/>
-                    </svg>
-                </div>
-                <h3>ACESSO AOS CONTEÚDOS</h3>
-                <p>
-                    Consulte as condições e o período de acesso da oferta.
-                </p>
-            </article>
 
-            <!-- CARD 6 -->
-            <article class="recebe-card">
-                <div class="recebe-icon">
-                    <svg viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="1.5"
-                         stroke-linecap="round" stroke-linejoin="round"
-                         aria-hidden="true">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                        <circle cx="10" cy="7" r="4"/>
-                        <path d="M20 8v6M17 11h6"/>
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M3 11a8 8 0 0 1 14.5-4.7L21 9"
+                        />
+
+                        <path
+                            d="M21 4v5h-5"
+                        />
+
+                        <path
+                            d="M21 13a8 8 0 0 1-14.5 4.7L3 15"
+                        />
+
+                        <path
+                            d="M3 20v-5h5"
+                        />
                     </svg>
+
                 </div>
-                <h3>COMUNIDADE EXCLUSIVA</h3>
+
+                <h3>
+                    ESPAÇO DE TROCA
+                </h3>
+
                 <p>
-                    Um espaço de troca e apoio
-                    com outras mulheres.
+                    Um espaço com mulheres que entendem exatamente
+                    o que você está vivendo porque já viveram,
+                    ou estão vivendo agora, a mesma coisa.
                 </p>
+
             </article>
 
         </div>
 
-       <!-- ELEMENTO BOTÂNICO DECORATIVO -->
-<img
-    src="img/folhas-vinho.png"
-    alt=""
-    class="recebe-decor"
-    aria-hidden="true"
->
+
+        <img
+            src="img/folhas-vinho.png"
+            alt=""
+            class="recebe-decor"
+            aria-hidden="true"
+        >
 
     </div>
+
 </section>
 
 
+<!-- =====================================================
+     BÔNUS ESPECIAIS
+====================================================== -->
 
-<!-- ========================================= 
-     BÔNUS ESPECIAIS 
-========================================= -->
+<section
+    class="bonus-section"
+    id="bonus"
+    aria-labelledby="bonus-title"
+>
 
-<section class="bonus-section" id="bonus">
+    <!-- FLOR DECORATIVA DE FUNDO -->
+    <img
+        class="bonus-floral"
+        src="img/BONUS-FLOR.png"
+        alt=""
+        aria-hidden="true"
+    >
 
     <div class="bonus-container">
 
         <!-- INTRODUÇÃO -->
+
         <div class="bonus-intro">
 
-            <span class="bonus-label">BÔNUS ESPECIAIS</span>
+            <span class="bonus-label">
+                BÔNUS ESPECIAIS
+            </span>
 
-            <h2>
-                PARA POTENCIALIZAR
-                <span>A sua transformação.</span>
+            <h2 id="bonus-title">
+                ALÉM DA MENTORIA,
+                <span>VOCÊ TAMBÉM RECEBE.</span>
             </h2>
 
-            <p class="bonus-description">
-                Além do conteúdo principal, você ainda recebe 
-                bônus exclusivos que vão te ajudar a aplicar 
-                o que aprendeu de forma ainda mais prática 
-                e profunda.
-            </p>
-
         </div>
 
 
-        <!-- Bônus descritos neste rascunho; confirmar os nomes e conteúdos com o gestor. -->
-        <!-- CARDS DE BÔNUS -->
+        <!-- GRID DOS BÔNUS -->
+
         <div class="bonus-grid">
 
-            <!-- CARD 1 -->
+            <!-- BÔNUS 1 -->
             <article class="bonus-card">
 
-                <div class="bonus-icon">
-                    <svg viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="1.5"
-                         stroke-linecap="round"
-                         stroke-linejoin="round"
-                         aria-hidden="true">
-
-                        <circle cx="12" cy="12" r="9"/>
-                        <path d="m8 12 2.5 2.5L16 9"/>
-
-                    </svg>
+                <div class="bonus-icon" aria-hidden="true">
+                    <span>01</span>
                 </div>
 
                 <h3>
-                    CHECKLIST<br>
-                    DA LIBERDADE
+                    DESVINCULAÇÃO COM O NARCISISTA
                 </h3>
 
                 <p>
-                    Organize seus próximos passos 
-                    com clareza.
+                    Trabalhar o processo de desvinculação.
                 </p>
 
             </article>
 
 
-            <!-- CARD 2 -->
+            <!-- BÔNUS 2 -->
             <article class="bonus-card">
 
-                <div class="bonus-icon">
-                    <svg viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="1.5"
-                         stroke-linecap="round"
-                         stroke-linejoin="round"
-                         aria-hidden="true">
-
-                        <circle cx="12" cy="12" r="9"/>
-                        <circle cx="12" cy="12" r="5"/>
-                        <circle cx="12" cy="12" r="1.5"/>
-                        <path d="m16 8 5-5"/>
-                        <path d="M17 3h4v4"/>
-
-                    </svg>
+                <div class="bonus-icon" aria-hidden="true">
+                    <span>02</span>
                 </div>
 
                 <h3>
-                    PLANO DE AÇÃO<br>
-                    PERSONALIZADO
+                    MULHER RESTAURADA
                 </h3>
 
                 <p>
-                    Transforme o aprendizado 
-                    em atitudes reais.
+                    Recuperar a sua identidade.
                 </p>
 
             </article>
 
 
-            <!-- CARD 3 -->
+            <!-- BÔNUS 3 -->
             <article class="bonus-card">
 
-                <div class="bonus-icon">
-                    <svg viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="1.5"
-                         stroke-linecap="round"
-                         stroke-linejoin="round"
-                         aria-hidden="true">
-
-                        <path d="M12 21c-4-2-8-5-8-10 
-                                 3 0 5 1 8 4 
-                                 3-3 5-4 8-4 
-                                 0 5-4 8-8 10Z"/>
-
-                        <path d="M12 15c-2-3-2-7 0-11 
-                                 2 4 2 8 0 11Z"/>
-
-                        <path d="M5 7c2 0 4 1 7 4
-                                 M19 7c-2 0-4 1-7 4"/>
-
-                    </svg>
+                <div class="bonus-icon" aria-hidden="true">
+                    <span>03</span>
                 </div>
 
                 <h3>
-                    MEDITAÇÃO<br>
-                    GUIADA
+                    DIVÓRCIO ENERGÉTICO
                 </h3>
 
                 <p>
-                    Um momento para desacelerar, 
-                    acolher suas emoções e se reconectar.
+                    Encerramento conscientemente do vínculo.
                 </p>
 
             </article>
 
-        </div>
 
+            <!-- BÔNUS 4 -->
+            <article class="bonus-card">
 
-        <!-- BOTÃO — AGORA FICA NO FINAL -->
-        <div class="bonus-cta-area">
+                <div class="bonus-icon" aria-hidden="true">
+                    <span>04</span>
+                </div>
 
-            <a href="INSERIR_LINK_CHECKOUT_HOTMART" class="bonus-cta">
-                Quero minha vaga
-            </a>
+                <h3>
+                    ÁUDIOS DE DESPROGRAMAÇÃO E REPROGRAMAÇÃO
+                </h3>
+
+                <p>
+                    Áudios curtos para te acompanhar fora das aulas.
+                </p>
+
+            </article>
 
         </div>
 
     </div>
 
 </section>
-</div>
+
 
 <!-- =====================================================
-     PARA QUEM É / PARA QUEM NÃO É
-===================================================== -->
+     PERFIL — É PARA VOCÊ / TALVEZ NÃO SEJA PARA VOCÊ
+====================================================== -->
 
-<section class="perfil-section" id="para-quem">
+<section
+    class="perfil-section"
+    id="para-quem"
+>
 
     <div class="perfil-container">
 
         <div class="perfil-grid">
 
-            <!-- PARA QUEM É -->
+            <!-- =========================================
+                 É PARA VOCÊ
+            ========================================== -->
+
             <article class="perfil-card perfil-card--sim">
 
                 <div class="perfil-card-header">
-                    <span class="perfil-card-icon">✓</span>
+
+                    <span class="perfil-card-icon">
+                        ✓
+                    </span>
 
                     <div>
-                        <span class="perfil-card-label">
-                            PARA QUEM É
-                        </span>
-
-                        <h3>É para você se...</h3>
+                        <h3>
+                            É PARA VOCÊ SE...
+                        </h3>
                     </div>
+
                 </div>
+
 
                 <ul class="perfil-list">
 
+                    <!-- 01 -->
                     <li>
-                        <span class="perfil-number">01</span>
+                        <span class="perfil-number">
+                            01
+                        </span>
+
                         <p>
-                            Está ou esteve em uma relação tóxica,
-                            abusiva ou com alguém com comportamento
-                            narcisista.
+                            Você está se preparando para sair
+                            de uma relação.
                         </p>
                     </li>
 
+
+                    <!-- 02 -->
                     <li>
-                        <span class="perfil-number">02</span>
+                        <span class="perfil-number">
+                            02
+                        </span>
+
                         <p>
-                            Sente que precisa recuperar sua clareza,
-                            autoestima e segurança emocional.
+                            Já saiu, mas ainda se sente presa
+                            à relação.
                         </p>
                     </li>
 
+
+                    <!-- 03 -->
                     <li>
-                        <span class="perfil-number">03</span>
+                        <span class="perfil-number">
+                            03
+                        </span>
+
                         <p>
-                            Quer compreender seus padrões e não repetir
-                            os mesmos ciclos.
+                            Terminou, mas ainda se sente culpa.
                         </p>
                     </li>
 
+
+                    <!-- 04 -->
                     <li>
-                        <span class="perfil-number">04</span>
+                        <span class="perfil-number">
+                            04
+                        </span>
+
                         <p>
-                            Busca voltar a confiar em si e fazer escolhas
-                            mais alinhadas com quem você é.
+                            Sabe que não deveria voltar,
+                            mas espera que ele mude.
                         </p>
                     </li>
 
@@ -794,44 +988,74 @@
             </article>
 
 
-            <!-- PARA QUEM NÃO É -->
+
+            <!-- =========================================
+                 TALVEZ NÃO SEJA PARA VOCÊ
+            ========================================== -->
+
             <article class="perfil-card perfil-card--nao">
 
                 <div class="perfil-card-header">
-                    <span class="perfil-card-icon perfil-card-icon--x">×</span>
+
+                    <span class="perfil-card-icon perfil-card-icon--x">
+                        ×
+                    </span>
 
                     <div>
-                        <span class="perfil-card-label">
-                            PARA QUEM NÃO É
-                        </span>
-
-                        <h3>Talvez não seja para você se...</h3>
+                        <h3>
+                            TALVEZ NÃO SEJA PARA VOCÊ SE...
+                        </h3>
                     </div>
+
                 </div>
+
 
                 <ul class="perfil-list">
 
+                    <!-- 01 -->
                     <li>
-                        <span class="perfil-number">01</span>
+                        <span class="perfil-number">
+                            01
+                        </span>
+
                         <p>
-                            Procura uma fórmula rápida para resolver
-                            uma situação complexa.
+                            Precisa de acompanhamento clínico.
                         </p>
                     </li>
 
+
+                    <!-- 02 -->
                     <li>
-                        <span class="perfil-number">02</span>
+                        <span class="perfil-number">
+                            02
+                        </span>
+
                         <p>
-                            Espera apenas motivação, sem disposição
-                            para olhar para o próprio processo.
+                            Está em situação de perigo imediato.
                         </p>
                     </li>
 
+
+                    <!-- 03 -->
                     <li>
-                        <span class="perfil-number">03</span>
+                        <span class="perfil-number">
+                            03
+                        </span>
+
                         <p>
-                            Não está aberta a reconhecer padrões e
-                            construir novas escolhas.
+                            Quer que alguém decida por você.
+                        </p>
+                    </li>
+
+
+                    <!-- 04 -->
+                    <li>
+                        <span class="perfil-number">
+                            04
+                        </span>
+
+                        <p>
+                            Não está disposta a agir.
                         </p>
                     </li>
 
@@ -845,184 +1069,99 @@
 
 </section>
 
+
+
+
 <!-- =====================================================
-     DEPOIMENTOS
+     DEPOIMENTO
 ===================================================== -->
 
-<section class="depoimentos-section" id="depoimentos">
+<section
+    class="depoimentos-section"
+    id="depoimentos"
+>
+
+   <!-- FLORES DECORATIVAS -->
+
+<img
+    class="depoimentos-floral depoimentos-floral--left"
+    src="img/FLOR-DEPOI.png"
+    alt=""
+    aria-hidden="true"
+>
+
+<img
+    class="depoimentos-floral depoimentos-floral--right"
+    src="img/FLOR-DEPOI.png"
+    alt=""
+    aria-hidden="true"
+>
+
+
     <div class="depoimentos-container">
 
         <!-- INTRODUÇÃO -->
+
         <div class="depoimentos-intro">
-            <span class="depoimentos-label">DEPOIMENTOS</span>
+
+            <span class="depoimentos-label">
+                DEPOIMENTO
+            </span>
 
             <h2>
-                ESPAÇO RESERVADO
-                <span>PARA DEPOIMENTOS.</span>
+                Uma experiência compartilhada por quem viveu esse processo.
             </h2>
 
-            <p class="depoimentos-description">
-                Depoimentos reais aprovados serão inseridos aqui após validação.
-            </p>
-
-
-        </div>
-
-        <!-- CARROSSEL -->
-        <div class="depoimentos-carousel" id="depoimentos-lista">
-
-            <!-- SETA ANTERIOR -->
-            <button
-                class="depoimentos-arrow depoimentos-prev"
-                type="button"
-                aria-label="Ver depoimentos anteriores">
-                <svg viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="1.5"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                     aria-hidden="true">
-                    <path d="m15 18-6-6 6-6"/>
-                </svg>
-            </button>
-
-            <!-- ÁREA VISÍVEL -->
-            <div class="depoimentos-viewport">
-                <div class="depoimentos-track">
-
-                    <!-- DEPOIMENTO 1 -->
-                    <article class="depoimento-card">
-                        <div class="depoimento-avatar">
-                            <svg viewBox="0 0 24 24" fill="none"
-                                 stroke="currentColor"
-                                 stroke-width="1.2"
-                                 aria-hidden="true">
-                                <circle cx="12" cy="8" r="3.5"/>
-                                <path d="M5 21c0-4 2.8-6.5 7-6.5s7 2.5 7 6.5"/>
-                            </svg>
-                        </div>
-
-                        <span class="depoimento-placeholder-label">PLACEHOLDER — AGUARDANDO APROVAÇÃO</span>
-
-                        <p class="depoimento-text">
-                            [Depoimento real aprovado a inserir.]
-                        </p>
-
-                        <span class="depoimento-name">
-                            Nome da aluna
-                        </span>
-                    </article>
-
-                    <!-- DEPOIMENTO 2 -->
-                    <article class="depoimento-card">
-                        <div class="depoimento-avatar">
-                            <svg viewBox="0 0 24 24" fill="none"
-                                 stroke="currentColor"
-                                 stroke-width="1.2"
-                                 aria-hidden="true">
-                                <circle cx="12" cy="8" r="3.5"/>
-                                <path d="M5 21c0-4 2.8-6.5 7-6.5s7 2.5 7 6.5"/>
-                            </svg>
-                        </div>
-
-                        <span class="depoimento-placeholder-label">PLACEHOLDER — AGUARDANDO APROVAÇÃO</span>
-
-                        <p class="depoimento-text">
-                            [Depoimento real aprovado a inserir.]
-                        </p>
-
-                        <span class="depoimento-name">
-                            Nome da aluna
-                        </span>
-                    </article>
-
-                    <!-- DEPOIMENTO 3 -->
-                    <article class="depoimento-card">
-                        <div class="depoimento-avatar">
-                            <svg viewBox="0 0 24 24" fill="none"
-                                 stroke="currentColor"
-                                 stroke-width="1.2"
-                                 aria-hidden="true">
-                                <circle cx="12" cy="8" r="3.5"/>
-                                <path d="M5 21c0-4 2.8-6.5 7-6.5s7 2.5 7 6.5"/>
-                            </svg>
-                        </div>
-
-                        <span class="depoimento-placeholder-label">PLACEHOLDER — AGUARDANDO APROVAÇÃO</span>
-
-                        <p class="depoimento-text">
-                            [Depoimento real aprovado a inserir.]
-                        </p>
-
-                        <span class="depoimento-name">
-                            Nome da aluna
-                        </span>
-                    </article>
-
-                    <!-- DEPOIMENTO 4 -->
-                    <article class="depoimento-card">
-                        <div class="depoimento-avatar">
-                            <svg viewBox="0 0 24 24" fill="none"
-                                 stroke="currentColor"
-                                 stroke-width="1.2"
-                                 aria-hidden="true">
-                                <circle cx="12" cy="8" r="3.5"/>
-                                <path d="M5 21c0-4 2.8-6.5 7-6.5s7 2.5 7 6.5"/>
-                            </svg>
-                        </div>
-
-                        <span class="depoimento-placeholder-label">PLACEHOLDER — AGUARDANDO APROVAÇÃO</span>
-
-                        <p class="depoimento-text">
-                            [Depoimento real aprovado a inserir.]
-                        </p>
-
-                        <span class="depoimento-name">
-                            Nome da aluna
-                        </span>
-                    </article>
-
-                    <!-- DEPOIMENTO 5 -->
-                    <article class="depoimento-card">
-                        <div class="depoimento-avatar">
-                            <svg viewBox="0 0 24 24" fill="none"
-                                 stroke="currentColor"
-                                 stroke-width="1.2"
-                                 aria-hidden="true">
-                                <circle cx="12" cy="8" r="3.5"/>
-                                <path d="M5 21c0-4 2.8-6.5 7-6.5s7 2.5 7 6.5"/>
-                            </svg>
-                        </div>
-
-                        <span class="depoimento-placeholder-label">PLACEHOLDER — AGUARDANDO APROVAÇÃO</span>
-
-                        <p class="depoimento-text">
-                            [Depoimento real aprovado a inserir.]
-                        </p>
-
-                        <span class="depoimento-name">
-                            Nome da aluna
-                        </span>
-                    </article>
-
-                </div>
+            <!-- DETALHE DECORATIVO -->
+            <div class="depoimentos-detalhe" aria-hidden="true">
+                <span></span>
+                <i>✿</i>
+                <span></span>
             </div>
 
-            <!-- SETA PRÓXIMA -->
-            <button
-                class="depoimentos-arrow depoimentos-next"
-                type="button"
-                aria-label="Ver próximos depoimentos">
-                <svg viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="1.5"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                     aria-hidden="true">
-                    <path d="m9 18 6-6-6-6"/>
-                </svg>
-            </button>
+        </div>
+
+
+        <!-- DEPOIMENTO EM VÍDEO -->
+
+        <div class="depoimento-card">
+
+            <div class="depoimento-video-wrapper">
+
+                <video
+                    class="depoimento-video"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    poster="img/foto-depoimento.jpg"
+                >
+
+                    <source
+                        src="img/Depoimento para Claudia_edited.mp4"
+                        type="video/mp4"
+                    >
+
+                    Seu navegador não suporta a reprodução de vídeos.
+
+                </video>
+
+            </div>
+
+
+            <!-- NOME DA ALUNA -->
+
+            <div class="depoimento-info">
+
+                <span class="depoimento-name">
+                    Nome da aluna
+                </span>
+
+            </div>
 
         </div>
+
     </div>
+
 </section>
 
 
@@ -1032,38 +1171,14 @@
 
 <section class="investimento-section" id="investimento">
 
-    <!-- DECORAÇÃO BOTÂNICA DIREITA -->
-    <svg class="investimento-decor investimento-decor-right"
-         viewBox="0 0 220 360" fill="none"
-         aria-hidden="true">
-        <g stroke="currentColor" stroke-width="1.2">
-            <path d="M215 355C165 270 140 175 170 10"/>
-            <path d="M192 300C145 286 120 257 111 213C155 223 183 253 192 300Z"/>
-            <path d="M166 242C121 220 99 183 101 139C143 157 165 196 166 242Z"/>
-            <path d="M158 176C121 148 111 108 125 67C157 100 169 137 158 176Z"/>
-            <path d="M180 276C214 235 222 194 208 154C182 190 173 232 180 276Z"/>
-            <path d="M170 205C206 172 220 132 209 91C176 121 161 163 170 205Z"/>
-            <path d="M134 279C91 278 57 257 37 219C81 217 117 239 134 279Z"/>
-            <path d="M150 119C119 91 105 54 113 17"/>
-        </g>
-    </svg>
-
-    <!-- DECORAÇÃO BOTÂNICA ESQUERDA -->
-    <svg class="investimento-decor investimento-decor-left"
-         viewBox="0 0 220 360" fill="none"
-         aria-hidden="true">
-        <g stroke="currentColor" stroke-width="1.2">
-            <path d="M5 355C55 270 80 175 50 10"/>
-            <path d="M28 300C75 286 100 257 109 213C65 223 37 253 28 300Z"/>
-            <path d="M54 242C99 220 121 183 119 139C77 157 55 196 54 242Z"/>
-            <path d="M62 176C99 148 109 108 95 67C63 100 51 137 62 176Z"/>
-            <path d="M40 276C6 235 -2 194 12 154C38 190 47 232 40 276Z"/>
-        </g>
-    </svg>
 
     <div class="investimento-container">
 
-        <!-- INTRODUÇÃO -->
+
+        <!-- =================================================
+             COLUNA ESQUERDA
+        ================================================== -->
+
         <div class="investimento-intro">
 
             <span class="investimento-label">
@@ -1071,120 +1186,242 @@
             </span>
 
             <h2>
-                UM INVESTIMENTO
-                <span>EM VOCÊ.</span>
+                ANTES DE FALAR DE VALOR,
+                <span>
+                    EU QUERO FALAR DE DESCONFIANÇA.
+                </span>
             </h2>
 
             <p>
-Consulte os detalhes da oferta, dos conteúdos incluídos e das condições de pagamento antes de finalizar sua inscrição.
+                Você já ouviu promessas demais de gente que não cumpriu.
+                Se uma voz dentro de você está desconfiada agora,
+                ótimo! É a sua percepção voltando a funcionar.
             </p>
 
-    
+            <p>
+                O que já custou fazer isso sozinha: os livros,
+                os cursos que você não terminou, as sessões
+                que começou e parou. E o que custou, o que você
+                deixou de fazer, o trabalho, os planos, os anos.
+            </p>
 
         </div>
 
-        <!-- COMPARATIVO -->
+
+        <!-- =================================================
+             ÁREA CENTRAL — MOCKUP DA CLÁUDIA
+        ================================================== -->
+
+        <div class="investimento-visual">
+
+            <div class="investimento-visual-glow"></div>
+
+            <div class="investimento-mockup">
+
+                <!-- SUBSTITUA APENAS ESTE ARQUIVO PELA IMAGEM -->
+                <img
+                    src="img/MOCKUP CLAUDIA .png"
+                    alt="Cláudia"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             CARDS MENORES
+        ================================================== -->
+
         <div class="investimento-comparativo">
 
-            <!-- O QUE JÁ CUSTOU -->
+
+            <!-- CARD 01 -->
+
             <article class="investimento-comparativo-card">
 
                 <div class="investimento-comparativo-icon">
-                    <svg viewBox="0 0 48 48" fill="none"
-                         stroke="currentColor"
-                         stroke-width="1.4"
-                         stroke-linecap="round"
-                         stroke-linejoin="round"
-                         aria-hidden="true">
+
+                    <svg
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
                         <circle cx="24" cy="24" r="16"/>
                         <path d="M13 13 35 35"/>
                         <path d="M18 20c2-4 9-4 11 0"/>
                         <path d="M18 29c3 3 9 3 12 0"/>
                     </svg>
+
                 </div>
 
-                <h3>O QUE JÁ CUSTOU</h3>
+                <h3>
+                    O QUE JÁ CUSTOU
+                </h3>
 
                 <ul>
-                    <li>Tempo e energia investidos na relação</li>
-                    <li>Tentativas de resolver a situação</li>
-                    <li>Impactos na rotina e no bem-estar</li>
+
+                    <li>
+                        Os livros que você já leu.
+                    </li>
+
+                    <li>
+                        Os cursos que começou e não terminou.
+                    </li>
+
+                    <li>
+                        As sessões que começou e parou.
+                    </li>
+
+                    <li>
+                        O trabalho, os planos e os anos que ficaram para depois.
+                    </li>
+
                 </ul>
 
             </article>
 
-            <!-- O QUE CUSTARIA SEPARADO -->
+
+            <!-- CARD 02 -->
+
             <article class="investimento-comparativo-card">
 
                 <div class="investimento-comparativo-icon">
-                    <svg viewBox="0 0 48 48" fill="none"
-                         stroke="currentColor"
-                         stroke-width="1.4"
-                         stroke-linecap="round"
-                         stroke-linejoin="round"
-                         aria-hidden="true">
+
+                    <svg
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
                         <ellipse cx="24" cy="12" rx="15" ry="6"/>
                         <path d="M9 12v9c0 3.3 6.7 6 15 6s15-2.7 15-6v-9"/>
                         <path d="M9 21v9c0 3.3 6.7 6 15 6s15-2.7 15-6v-9"/>
                         <path d="M9 30v6c0 3.3 6.7 6 15 6s15-2.7 15-6v-6"/>
-                        <path d="M9 21c0 3.3 6.7 6 15 6s15-2.7 15-6"/>
                     </svg>
+
                 </div>
 
-                <h3>O QUE CUSTARIA SEPARADO</h3>
+                <h3>
+                    O QUE CUSTARIA SEPARADO
+                </h3>
 
-                <ul>
-                    <li>Conteúdos e materiais de apoio</li>
-                    <li>Encontros e acompanhamento</li>
-                    <li>Ferramentas para aplicar o método</li>
-                </ul>
+                <p>
+                    Uma terapia semanal nos Estados Unidos custa
+                    entre US$ 100 e US$ 200 por sessão.
+                </p>
+
+                <p>
+                    Oito semanas passam de US$ 1.000 em acompanhamento
+                    individual, sem comunidade e sem um método específico
+                    para esse padrão.
+                </p>
 
             </article>
 
         </div>
 
-        <!-- CARD DO PREÇO -->
+
+        <!-- =================================================
+             CARD PRINCIPAL — INVESTIMENTO
+        ================================================== -->
+
         <div class="investimento-card">
 
-            <div class="investimento-card-icon">
-                <svg viewBox="0 0 48 48" fill="none"
-                     stroke="currentColor"
-                     stroke-width="1.5"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                     aria-hidden="true">
-                    <path d="M8 18 28 6h13v14L21 40 8 27z"/>
-                    <circle cx="33" cy="14" r="2.5"/>
-                    <path d="m18 23 9 9"/>
-                </svg>
+
+            <div class="investimento-card-top">
+
+                <span class="investimento-card-label">
+                    PRIMEIRA TURMA
+                </span>
+
+                <div class="investimento-card-icon">
+
+                    <svg
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M8 18 28 6h13v14L21 40 8 27z"/>
+                        <circle cx="33" cy="14" r="2.5"/>
+                        <path d="m18 23 9 9"/>
+                    </svg>
+
+                </div>
+
+                <span class="investimento-card-small">
+                    INVESTIMENTO
+                </span>
+
+                <div class="investimento-preco">
+
+                    <span class="investimento-moeda">
+                        US$
+                    </span>
+
+                    <strong>
+                        497
+                    </strong>
+
+                </div>
+
+                <span class="investimento-a-vista">
+                    À VISTA
+                </span>
+
             </div>
 
-            <span class="investimento-card-label">
-                O QUE É
-            </span>
-
-            <div class="investimento-preco">
-                <span class="investimento-moeda">US$</span>
-                <strong>497</strong>
-            </div>
-
-            <span class="investimento-parcelas">
-                ou 12x de R$ 249
-            </span>
 
             <div class="investimento-card-divider"></div>
 
-            <a href="INSERIR_LINK_CHECKOUT_HOTMART" class="investimento-card-cta">
-                Quero minha vaga
-            </a>
 
-            <span class="investimento-card-note">
-                Consulte as condições da oferta no checkout.
-            </span>
+            <div class="investimento-card-content">
+
+                <p>
+                    Menos de dez dólares por dia, por oito semanas
+                    de acompanhamento ao vivo, método completo,
+                    comunidade e todos os bônus.
+                </p>
+
+                <p>
+                    Essa é a primeira turma. É o menor preço que
+                    essa mentoria vai ter. Vocês vão construir
+                    ela comigo. Nas próximas, o valor sobe.
+                </p>
+
+            </div>
+
+
+            <div class="investimento-card-action">
+
+                <a
+                    href="INSERIR_LINK_CHECKOUT_HOTMART"
+                    class="investimento-card-cta"
+                >
+                    QUERO MINHA VAGA
+                </a>
+
+                <span class="investimento-card-note">
+                    Consulte as condições de pagamento no checkout.
+                </span>
+
+            </div>
 
         </div>
 
     </div>
+
 </section>
 
 
@@ -1192,52 +1429,69 @@ Consulte os detalhes da oferta, dos conteúdos incluídos e das condições de p
      GARANTIA
 ===================================================== -->
 
-<section class="garantia-section" id="garantia">
+<section
+    class="garantia-section"
+    id="garantia"
+>
 
     <div class="garantia-container">
 
-        <!-- SELO -->
-        <div class="garantia-selo" aria-label="Garantia">
+        <div
+            class="garantia-selo"
+            aria-label="Garantia de 30 dias"
+        >
 
             <div class="garantia-selo-inner">
-                <span class="garantia-selo-numero">✓</span>
+                <span class="garantia-selo-numero">
+                    30
+                </span>
+
+                <span>
+                    DIAS
+                </span>
             </div>
 
         </div>
 
-
-        <!-- INFORMAÇÕES DA GARANTIA -->
         <div class="garantia-info">
 
             <span class="garantia-label">
-                GARANTIA
+                GARANTIA INCONDICIONAL
             </span>
 
             <h2>
-                Sua segurança também faz parte
-                <span>da sua jornada.</span>
+                30 DIAS PARA CONHECER
+                <span>A MENTORIA</span>
             </h2>
 
             <p class="garantia-description">
-                Se a Mentoria Blindagem Emocional não for o que você precisa,
-                consulte no checkout as condições e o prazo aplicáveis à garantia.
+                Entra, assiste às aulas, participa dos encontros ao vivo,
+                entra na comunidade. Se em 30 dias você achar que não é
+                pra você, escreve uma linha e eu devolvo cada centavo.
+                Sem pergunta, sem justificativa.
+            </p>
+
+            <p class="garantia-description">
+                Eu garanto o processo, as ferramentas, o passo a passo,
+                o acompanhamento. Isso está sob o meu controle, e nisso
+                eu não falho. O que eu não controlo é o seu tempo,
+                porque o tempo de cada mulher é a história de cada mulher.
+            </p>
+
+            <p class="garantia-description">
+                Por isso eu não prometo cura em 8 semanas,
+                prometo que você não vai atravessar isso sozinha.
             </p>
 
         </div>
 
-
-        <!-- DIVISOR -->
         <div class="garantia-divider"></div>
 
-
-        <!-- AVISO -->
         <div class="garantia-emergencia">
-
             <p>
-                Se você está em perigo imediato,
-                procure ajuda local agora.
+                Esta mentoria não substitui terapia ou acompanhamento
+                profissional.
             </p>
-
         </div>
 
     </div>
@@ -1245,17 +1499,27 @@ Consulte os detalhes da oferta, dos conteúdos incluídos e das condições de p
 </section>
 
 
+
 <!-- =====================================================
-     VAGAS LIMITADAS
+     VAGAS
 ===================================================== -->
 
-<section class="vagas-section" id="vagas">
+<section
+    class="vagas-section"
+    id="vagas"
+>
 
     <div class="vagas-container">
 
-        <!-- ÍCONE -->
-        <div class="vagas-icon" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none">
+        <div
+            class="vagas-icon"
+            aria-hidden="true"
+        >
+
+            <svg
+                viewBox="0 0 64 64"
+                fill="none"
+            >
                 <circle cx="32" cy="18" r="7"></circle>
                 <circle cx="16" cy="25" r="5"></circle>
                 <circle cx="48" cy="25" r="5"></circle>
@@ -1264,28 +1528,33 @@ Consulte os detalhes da oferta, dos conteúdos incluídos e das condições de p
                 <path d="M7 45c0-5 4-9 9-9 3 0 6 2 8 5"></path>
                 <path d="M57 45c0-5-4-9-9-9-3 0-6 2-8 5"></path>
             </svg>
+
         </div>
 
-
-        <!-- TEXTO -->
         <div class="vagas-info">
 
-            <h2>Vagas</h2>
+            <h2>
+                30 VAGAS
+            </h2>
 
             <p>
-                Apenas 30 vagas disponíveis para esta turma.
+                30 vagas. Não é estratégia, é limite real.
+                Acompanho cada mulher ao vivo, e mais que isso
+                eu não consigo fazer bem.
+            </p>
+
+            <p>
+                A turma começa dia 7 de setembro, às 20h EST.
             </p>
 
         </div>
 
-
-        <!-- BOTÃO -->
         <a
             href="INSERIR_LINK_CHECKOUT_HOTMART"
             class="vagas-cta"
         >
-            Quero minha vaga
-            <span aria-hidden="true">→</span>
+            QUERO MINHA VAGA
+            <span aria-hidden="true"></span>
         </a>
 
     </div>
@@ -1293,108 +1562,255 @@ Consulte os detalhes da oferta, dos conteúdos incluídos e das condições de p
 </section>
 
 
-
 <!-- =====================================================
      OBJEÇÕES / DÚVIDAS FREQUENTES
-     Respostas pendentes de validação com o gestor.
 ===================================================== -->
-<section class="faq-section" id="duvidas" aria-labelledby="faq-title">
+
+<section
+    class="faq-section"
+    id="duvidas"
+    aria-labelledby="faq-title"
+>
+
     <div class="faq-container">
-        <span class="faq-label">DÚVIDAS FREQUENTES</span>
-        <h2 class="faq-title" id="faq-title">TIRE SUAS DÚVIDAS</h2>
+
+        <span class="faq-label">
+            DÚVIDAS FREQUENTES
+        </span>
+
+        <h2
+            class="faq-title"
+            id="faq-title"
+        >
+            TALVEZ VOCÊ ESTEJA SE PERGUNTANDO...
+        </h2>
 
         <div class="faq-list">
+
+            <!-- PERGUNTA 1 -->
             <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-resposta-1">
-                    <span>Como funciona o método?</span>
-                    <span class="faq-icon" aria-hidden="true">+</span>
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-resposta-1"
+                >
+                    <span>
+                        Como funciona a mentoria?
+                    </span>
+
+                    <span
+                        class="faq-icon"
+                        aria-hidden="true"
+                    >
+                        +
+                    </span>
                 </button>
-                <div class="faq-answer" id="faq-resposta-1">
-                    <p>[Inserir resposta oficial sobre o funcionamento e as etapas do método.]</p>
+
+                <div
+                    class="faq-answer"
+                    id="faq-resposta-1"
+                >
+                    <p>
+                        São 8 semanas com aulas, exercícios, encontros ao vivo e acompanhamento.
+                    </p>
                 </div>
+
             </div>
 
+            <!-- PERGUNTA 2 -->
             <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-resposta-2">
-                    <span>Por quanto tempo terei acesso?</span>
-                    <span class="faq-icon" aria-hidden="true">+</span>
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-resposta-2"
+                >
+                    <span>
+                        Como são os encontros?
+                    </span>
+
+                    <span
+                        class="faq-icon"
+                        aria-hidden="true"
+                    >
+                        +
+                    </span>
                 </button>
-                <div class="faq-answer" id="faq-resposta-2">
-                    <p>[Confirmar e inserir o período de acesso aprovado para a oferta.]</p>
+
+                <div
+                    class="faq-answer"
+                    id="faq-resposta-2"
+                >
+                    <p>
+                        Encontros ao vivo durante as 8 semanas, com espaço para perguntas e acompanhamento.
+                    </p>
                 </div>
+
             </div>
 
+            <!-- PERGUNTA 3 -->
             <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-resposta-3">
-                    <span>É necessário ter experiência?</span>
-                    <span class="faq-icon" aria-hidden="true">+</span>
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-resposta-3"
+                >
+                    <span>
+                        Isso substitui terapia?
+                    </span>
+
+                    <span
+                        class="faq-icon"
+                        aria-hidden="true"
+                    >
+                        +
+                    </span>
                 </button>
-                <div class="faq-answer" id="faq-resposta-3">
-                    <p>[Inserir orientação aprovada sobre os requisitos para participar.]</p>
+
+                <div
+                    class="faq-answer"
+                    id="faq-resposta-3"
+                >
+                    <p>
+                        Não. A Blindagem Emocional não substitui psicoterapia, acompanhamento psiquiátrico ou outros cuidados clínicos.
+                    </p>
                 </div>
+
             </div>
 
+            <!-- PERGUNTA 4 -->
             <div class="faq-item">
-                <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-resposta-4">
-                    <span>E se eu não gostar?</span>
-                    <span class="faq-icon" aria-hidden="true">+</span>
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-resposta-4"
+                >
+                    <span>
+                        E se eu desistir?
+                    </span>
+
+                    <span
+                        class="faq-icon"
+                        aria-hidden="true"
+                    >
+                        +
+                    </span>
                 </button>
-                <div class="faq-answer" id="faq-resposta-4">
-                    <p>[Inserir as condições e o prazo de garantia confirmados para a oferta.]</p>
+
+                <div
+                    class="faq-answer"
+                    id="faq-resposta-4"
+                >
+                    <p>
+                        Você tem 7 dias para conhecer a plataforma e solicitar o reembolso, conforme as condições da garantia.
+                    </p>
                 </div>
+
             </div>
+
+            <!-- PERGUNTA 5 -->
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-resposta-5"
+                >
+                    <span>
+                        Preciso estar separada do meu parceiro?
+                    </span>
+
+                    <span
+                        class="faq-icon"
+                        aria-hidden="true"
+                    >
+                        +
+                    </span>
+                </button>
+
+                <div
+                    class="faq-answer"
+                    id="faq-resposta-5"
+                >
+                    <p>
+                        Não. A mentoria também é para quem ainda está se preparando para sair ou continua emocionalmente presa à relação.
+                    </p>
+                </div>
+
+            </div>
+
         </div>
+
     </div>
+
 </section>
+
+
+
 
 <!-- =====================================================
      CTA FINAL
-     Texto de apoio é uma sugestão de layout e deve ser validado.
 ===================================================== -->
-<section class="cta-final-section" id="cta-final" aria-labelledby="cta-final-title">
+
+<section
+    class="cta-final-section"
+    id="cta-final"
+    aria-labelledby="cta-final-title"
+>
+
     <div class="cta-final-container">
-        <h2 id="cta-final-title">Sua blindagem começa agora.</h2>
-        <p>Conheça as condições da Mentoria Blindagem Emocional e escolha seu próximo passo.</p>
-        <a href="INSERIR_LINK_CHECKOUT_HOTMART" class="cta-final-button">Quero minha vaga</a>
+
+        <h2 id="cta-final-title">
+            Você quer apenas sair desse relacionamento?
+            Ou quer construir uma vida em que você nunca
+            mais aceite viver algo parecido?
+        </h2>
+
+        <p>
+            São duas coisas diferentes.
+            Só uma delas liberta de verdade.
+        </p>
+
+        <a
+            href="INSERIR_LINK_CHECKOUT_HOTMART"
+            class="cta-final-button"
+        >
+            QUERO MINHA VAGA
+        </a>
+
+        <span class="cta-final-note">
+            30 DIAS DE GARANTIA INCONDICIONAL
+        </span>
+
     </div>
+
 </section>
+
 
 <!-- =====================================================
      RODAPÉ
 ===================================================== -->
 
-<footer class="footer-section">
-    <div class="footer-container">
+<footer class="site-footer">
 
-        <!-- LOGO -->
-        <a href="#inicio" class="footer-logo">
-            <img src="img/logo-Claudia.png"
-                 alt="Cláudia Dem">
-        </a>
+    <p>
+        Se você está em perigo imediato, procure ajuda local agora.
+        Esta mentoria não substitui apoio profissional, psicológico ou jurídico.
+    </p>
 
-        <!-- TEXTO -->
-        <p class="footer-copy">
-            Se você está em perigo imediato, procure ajuda local agora.
-        </p>
+    <span class="site-footer-copyright">
+        © 2026 Cláudia. Todos os direitos reservados.
+    </span>
 
-        <!-- LINKS -->
-        <nav class="footer-links" aria-label="Links do rodapé">
-            <a href="INSERIR_LINK_TERMOS">Termos de uso</a>
-            <span class="footer-separator">|</span>
-            <a href="INSERIR_LINK_PRIVACIDADE">Política de Privacidade</a>
-            <span class="footer-separator">|</span>
-            <a href="INSERIR_LINK_SUPORTE">Suporte</a>
-        </nav>
-
-    </div>
-
-    <div class="footer-bottom">
-        <p>
-            © 2026 Cláudia Dem. Todos os direitos reservados.
-        </p>
-    </div>
 </footer>
-
 
     <script src="js/script.js"></script>
 

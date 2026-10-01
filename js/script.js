@@ -1,3 +1,4 @@
+
 /* Mentoria Blindagem Emocional — interações da página */
 (() => {
   'use strict';
@@ -383,25 +384,15 @@
 
 
     /* ============================================================
-       REVELAÇÃO SUAVE AO ROLAR
+       REVELAÇÃO SUAVE AO ROLAR A PÁGINA
+       Anima automaticamente as seções, sem editar o HTML.
+       Para alterar ou remover o efeito, edite este bloco.
     ============================================================ */
 
-    const revealTargets = $$(
-      '.reconhecimento-section, ' +
-      '.metodo-section, ' +
-      '.recebe-section, ' +
-      '.bonus-section, ' +
-      '.perfil-section, ' +
-      '.depoimentos-section, ' +
-      '.investimento-section, ' +
-      '.garantia-section, ' +
-      '.vagas-section, ' +
-      '.faq-section, ' +
-      '.cta-final-section, ' +
-      '.footer-section'
-    );
+    // Seleciona todas as seções, exceto o Hero, e o rodapé
+    const revealTargets = $$('section:not(.hero), footer');
 
-
+    // Verifica se o navegador permite a animação
     if (
       !window.matchMedia(
         '(prefers-reduced-motion: reduce)'
@@ -409,64 +400,47 @@
       'IntersectionObserver' in window
     ) {
 
-      document.documentElement.classList.add(
-        'js-reveal'
-      );
+      // Adiciona a classe que permite controlar a animação pelo CSS
+      document.documentElement.classList.add('js-reveal');
 
-
+      // Prepara as seções para a animação
       revealTargets.forEach(section => {
-
-        section.classList.add(
-          'scroll-reveal'
-        );
-
+        section.classList.add('scroll-reveal');
       });
 
+      // Detecta quando uma seção entra na área visível da tela
+      const observer = new IntersectionObserver(
+        entries => {
 
-      const observer =
-        new IntersectionObserver(
-          entries => {
+          entries.forEach(entry => {
 
-            entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
 
-              if (!entry.isIntersecting) return;
+            // Torna a seção visível
+            entry.target.classList.add('visible');
 
+            // Evita repetir a animação nessa seção
+            observer.unobserve(entry.target);
 
-              entry.target.classList.add(
-                'is-visible'
-              );
+          });
 
+        },
+        {
+          threshold: 0.03,
+          rootMargin: '0px 0px -10px 0px'
+        }
+      );
 
-              observer.unobserve(
-                entry.target
-              );
-
-            });
-
-          },
-
-          {
-            threshold: 0.03,
-            rootMargin: '0px 0px -10px 0px'
-          }
-
-        );
-
-
+      // Ativa a observação de todas as seções selecionadas
       revealTargets.forEach(section => {
-
         observer.observe(section);
-
       });
 
     } else {
 
+      // Mantém tudo visível se a animação não for suportada
       revealTargets.forEach(section => {
-
-        section.classList.add(
-          'is-visible'
-        );
-
+        section.classList.add('visible');
       });
 
     }
