@@ -3605,6 +3605,8 @@ padding: 38px 6% 38px;
     text-align: center;
 }
 
+
+
 /* =====================================================
    GARANTIA
 ===================================================== */
@@ -3612,130 +3614,107 @@ padding: 38px 6% 38px;
 .garantia-section {
     position: relative;
     width: 100%;
+    height: auto;
+    min-height: 0;
     box-sizing: border-box;
-    padding: 48px 8%;
+
+    padding: 20px 8% 24px;
+
     background: #f8f3ec;
     color: #5a1723;
     overflow: hidden;
 }
 
+/* =====================================================
+   CONTAINER
+===================================================== */
+
 .garantia-container {
-    display: grid;
-    grid-template-columns:
-        95px
-        minmax(0, 1.5fr)
-        1px
-        minmax(230px, 0.75fr);
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    column-gap: 50px;
+    justify-content: center;
+    gap: 5px;
+
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-
 /* =====================================================
-SELO DE GARANTIA
-===================================================== */
-
-.garantia-selo {
-display: flex;
-align-items: center;
-justify-content: center;
-width: 180px;
-height: auto;
-box-sizing: border-box;
-flex-shrink: 0;
-border: none;
-border-radius: 0;
-color: inherit;
-}
-
-.garantia-selo-imagem {
-display: block;
-width: 100%;
-max-width: 180px;
-height: auto;
-object-fit: contain;
-margin-left: -110px;
-}
-
-
-
-/* =====================================================
-   INFORMAÇÕES
+   TÍTULO GARANTIA
 ===================================================== */
 
 .garantia-info {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: none;
     min-width: 0;
-    max-width: 700px;
-    margin-left: 20px;
+    margin: 0;
+    text-align: center;
 }
 
 .garantia-label {
     display: block;
-    margin-bottom: 7px;
+    margin: 0;
+
     font-family: "Lato", sans-serif;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 2px;
     line-height: 1.2;
     color: #7a2635;
+    text-align: center;
 }
 
-.garantia-info h2 {
-    margin: 0 0 15px;
-    font-family: "Lato", sans-serif;
-    font-size: clamp(28px, 2.5vw, 39px);
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.6px;
-    color: #5a1723;
-}
+/* Oculta os textos antigos */
 
-.garantia-info h2 span {
-    color: #7a2635;
-}
-
+.garantia-info h2,
 .garantia-description {
-    max-width: 650px;
-    margin: 0 0 11px;
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
-    line-height: 1.55;
-    color: #6b595b;
+    display: none;
 }
-
-.garantia-description:last-child {
-    margin-bottom: 0;
-}
-
 
 /* =====================================================
-   DIVISOR
+   SELO DE GARANTIA
 ===================================================== */
 
-.garantia-divider {
-    width: 1px;
-    height: 125px;
-    background: rgba(90, 23, 35, 0.20);
+.garantia-selo {
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 250px;
+    height: auto;
+    flex-shrink: 0;
+    box-sizing: border-box;
+
+    border: none;
+    border-radius: 0;
+    color: inherit;
 }
 
+.garantia-selo-imagem {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+
+    object-fit: contain;
+    margin: 0 auto;
+}
 
 /* =====================================================
-   AVISO
+   ELEMENTOS NÃO UTILIZADOS
 ===================================================== */
 
+.garantia-divider,
 .garantia-emergencia {
-    max-width: 285px;
-}
-
-.garantia-emergencia p {
-    margin: 0;
-    font-family: "Lato", sans-serif;
-    font-size: 14px;
-    line-height: 1.55;
-    color: #6b595b;
+    display: none;
 }
 
 
@@ -5380,6 +5359,10 @@ margin-left: -110px;
         font-size: 20px;
     }
 
+    .depoimentos-detalhe{
+        display: none;
+    }
+
 
 
    .investimento-section {
@@ -5527,7 +5510,7 @@ margin-left: -110px;
     .investimento-card {
         grid-area: card;
         width: 100%;
-        max-width: 380px;
+        max-width: 600px;
         min-height: 0;
         margin: 0 auto;
         padding: 26px 22px;
@@ -5594,49 +5577,34 @@ margin-left: -110px;
         font-size: 13px;
         line-height: 1.4;
         text-align: center;
+        margin-top: -30px;
     }
 
-    .garantia-info h2 {
-        order: 2;
-        width: 100%;
-        max-width: 700px;
-        margin: 0;
-        font-size: 35px;
-        line-height: 1.15;
-        text-align: center;
-    }
 
-    .garantia-selo {
+   .garantia-selo {
         order: 3;
-        width: 110px;
+        width: 200px;
         height: auto;
         margin: 4px auto 8px;
         border: none;
         border-radius: 0;
         justify-self: center;
         align-items: center;
+        margin-top:-5px;
+        margin-bottom:-20px;
       
     }
-
     .garantia-selo-imagem {
         display: block;
-        width: 110px;
+        width: 200px;
         max-width: 100%;
         height: auto;
         object-fit: contain;
-        margin-left: 10px;
+        margin-left: 0px;
+        margin-top: -10px;
+        
     }
-
-    .garantia-description {
-        order: 4;
-        width: 100%;
-        max-width: 680px;
-        margin: 0;
-        font-size: 18px;
-        line-height: 1.6;
-        text-align: center;
-    }
-
+ 
     .garantia-divider {
         display: none;
     }
@@ -6990,6 +6958,7 @@ margin-left: -110px;
         font-size: 12px;
         letter-spacing: 1.8px;
         text-align: center;
+        margin-top: -40px;
     }
 
     .garantia-info h2 {
@@ -7004,9 +6973,9 @@ margin-left: -110px;
 
         .garantia-selo {
         order: 3;
-        width: 110px;
+        width: 200px;
         height: auto;
-        margin: 0 auto 20px;
+        margin: 0 auto -20px;
         border: none;
         border-radius: 0;
         align-items: center !important;
@@ -7014,7 +6983,7 @@ margin-left: -110px;
 
     .garantia-selo-imagem {
         display: block;
-        width: 110px;
+        width: 180px;
         max-width: 100%;
         height: auto;
         object-fit: contain;
@@ -7987,19 +7956,20 @@ margin-left: -110px;
 
    .garantia-selo {
         order: 3;
-        width: 90px;
+        width: 160px;
         height: auto;
-        margin: 0 auto 18px;
+        margin: 0 auto -28px;
         border: none;
         border-radius: 0;
     }
 
     .garantia-selo-imagem {
         display: block;
-        width: 90px;
+        width: 160px;
         max-width: 100%;
         height: auto;
         object-fit: contain;
+        margin-top: 1px;
     }
 
     .garantia-description {
